@@ -2,6 +2,7 @@
 
 #include "GameTime.h"
 #include "Stopwatch.h"
+#include "ContentManager.h"
 
 class Game
 {
@@ -12,13 +13,17 @@ public:
 	virtual void Update(GameTime gameTime);
 	virtual void Draw(GameTime gameTime);
 
+	ContentManager& GetContent();
+
 protected:
 	Game();
 
 	virtual void Initialize();
 
+	std::unique_ptr<ContentManager> content;
+	std::shared_ptr<ServiceProvider> service;
+
 private:
-	bool ProcessEvents();
 	void Render(GameTime gameTime);
 
 	void Tick();
@@ -27,4 +32,7 @@ private:
 
 	GameTime gameTime;
 	Stopwatch gameTimer;
+
+	float framePerSecond;
+	float tickPerFrame;
 };

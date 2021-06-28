@@ -1,16 +1,41 @@
 #include "stdafx.h"
 #include "Game.h"
+#include <raylib/raylib.h>
+
+const int screenWidth = 320;
+const int screenHeight = 240;
 
 Game::Game()
 {
+	framePerSecond = 1000;
+	tickPerFrame = 1000 / framePerSecond;
+
+	service = std::make_shared<ServiceProvider>();
+	content = std::make_unique<ContentManager>(service);
 }
 
 void Game::Run()
 {
+	Initialize();
+
+	gameTimer.Start();
+	while (!WindowShouldClose())
+	{
+		Tick();
+		auto deltaTime = (int)gameTime.ElapsedGameTime.Milliseconds();
+
+		Update(gameTime);
+		Render(gameTime);
+	}
+	CloseWindow();
 }
 
 void Game::Initialize()
 {
+	InitWindow(screenWidth, screenHeight, "Soulvania");
+	SetTargetFPS(60);
+
+	LoadContent();
 }
 
 void Game::LoadContent()
@@ -25,15 +50,22 @@ void Game::Draw(GameTime gameTime)
 {
 }
 
-bool Game::ProcessEvents()
-{
-	return false;
-}
-
 void Game::Render(GameTime gameTime)
 {
+	Draw(gameTime);
 }
 
 void Game::Tick()
 {
+	auto currentTick = gameTimer.ElapsedMilliseconds();
+	auto accumulatedTime = TimeSpan::FromMilliseconds(currentTick - gameTime.GetPreviousTicks());
+
+	gameTime.SetPreviousTicks(currentTick);
+	gameTime.ElapsedGameTime = accumulatedTime;
+	gameTime.TotalGameTime += accumulatedTime;
+}
+
+ContentManager& Game::GetContent()
+{
+	return *content;
 }

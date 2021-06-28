@@ -75,6 +75,63 @@
     <ClCompile Include="TestGame.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="Viewport.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="ContentManager.cpp">
+      <Filter>Engine\Content</Filter>
+    </ClCompile>
+    <ClCompile Include="ContentReader.cpp">
+      <Filter>Engine\Content</Filter>
+    </ClCompile>
+    <ClCompile Include="DictionaryReader.cpp">
+      <Filter>Engine\Content</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureRegion.cpp">
+      <Filter>Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationFrame.cpp">
+      <Filter>Engine\Content\Animations</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Engine\Content\Animations</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationFactory.cpp">
+      <Filter>Engine\Content\Animations</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationFactoryReader.cpp">
+      <Filter>Engine\Content\Animations</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundReader.cpp">
+      <Filter>Engine\Content</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteFontReader.cpp">
+      <Filter>Engine\Content</Filter>
+    </ClCompile>
+    <ClCompile Include="SpritesheetReader.cpp">
+      <Filter>Engine\Content</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureReader.cpp">
+      <Filter>Engine\Content</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Engine\Content\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>Engine\Content\TileMap</Filter>
+    </ClCompile>
+    <ClCompile Include="TiledMap.cpp">
+      <Filter>Engine\Content\TileMap</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteBatch.cpp">
+      <Filter>Engine\Content\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteExtensions.cpp">
+      <Filter>Engine\Content\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="TiledMapReader.cpp">
+      <Filter>Engine\Content\TileMap</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -183,6 +240,78 @@
     <ClInclude Include="TestGame.h">
       <Filter>Game</Filter>
     </ClInclude>
+    <ClInclude Include="Viewport.h">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="ContentManager.h">
+      <Filter>Engine\Content</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceProvider.h">
+      <Filter>Engine\Content</Filter>
+    </ClInclude>
+    <ClInclude Include="ContentReader.h">
+      <Filter>Engine\Content</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractReader.h">
+      <Filter>Engine\Content</Filter>
+    </ClInclude>
+    <ClInclude Include="DictionaryReader.h">
+      <Filter>Engine\Content</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadContentException.h">
+      <Filter>Engine\Content</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureRegion.h">
+      <Filter>Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationFrame.h">
+      <Filter>Engine\Content\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Engine\Content\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationFactory.h">
+      <Filter>Engine\Content\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationFactoryReader.h">
+      <Filter>Engine\Content\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundReader.h">
+      <Filter>Engine\Content</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteFontReader.h">
+      <Filter>Engine\Content</Filter>
+    </ClInclude>
+    <ClInclude Include="SpritesheetReader.h">
+      <Filter>Engine\Content</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureReader.h">
+      <Filter>Engine\Content</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Engine\Content\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>Engine\Content\TileMap</Filter>
+    </ClInclude>
+    <ClInclude Include="TiledMap.h">
+      <Filter>Engine\Content\TileMap</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteBatch.h">
+      <Filter>Engine\Content\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteExtensions.h">
+      <Filter>Engine\Content\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="IDrawable.h">
+      <Filter>Engine\Content\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="TiledMapReader.h">
+      <Filter>Engine\Content\TileMap</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="3rdparty">
@@ -211,6 +340,21 @@
     </Filter>
     <Filter Include="Game">
       <UniqueIdentifier>{b7885470-a081-4fed-b8c4-adb59dd194c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Content">
+      <UniqueIdentifier>{aab083ef-d906-4b28-9ad9-da7ba2096b3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Graphics">
+      <UniqueIdentifier>{99d35100-dfc5-42bf-a22e-4be8d24aee41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Content\Animations">
+      <UniqueIdentifier>{f49049ab-3ba8-445d-87bc-9035da47b926}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Content\Sprite">
+      <UniqueIdentifier>{ae19c451-7882-4c6f-b89b-be2861a8f734}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Content\TileMap">
+      <UniqueIdentifier>{9ba95659-168a-4b7b-9ba6-3b62e83873e7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

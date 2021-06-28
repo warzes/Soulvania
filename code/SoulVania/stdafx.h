@@ -24,5 +24,10 @@
 #include <vector>
 #include <list>
 #include <stack>
+#include <any>
+#include <map>
+#include <unordered_map>
+#include <typeindex>
+#include <stdexcept>
 
 #pragma warning(pop)
