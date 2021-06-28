@@ -27,6 +27,24 @@
     <ClCompile Include="..\3rdparty\raylib\utils.c">
       <Filter>3rdparty\raylib</Filter>
     </ClCompile>
+    <ClCompile Include="Color.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Rect.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="RectF.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="MathHelper.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\pugixml\pugixml.cpp">
+      <Filter>3rdparty\pugixml</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -57,6 +75,30 @@
     <ClInclude Include="..\3rdparty\raylib\uwp_events.h">
       <Filter>3rdparty\raylib</Filter>
     </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Rect.h">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2.h">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="RectF.h">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="MathHelper.h">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\pugixml\pugiconfig.hpp">
+      <Filter>3rdparty\pugixml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\pugixml\pugixml.hpp">
+      <Filter>3rdparty\pugixml</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="3rdparty">
@@ -64,6 +106,15 @@
     </Filter>
     <Filter Include="3rdparty\raylib">
       <UniqueIdentifier>{c58812ea-0f70-449d-ad31-65aa3218faf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{d088ad73-eab8-4795-a974-ef18790f34b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Math">
+      <UniqueIdentifier>{1562d210-428f-4bdb-9bb4-91d1862b3bae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdparty\pugixml">
+      <UniqueIdentifier>{3d627ea4-27cb-4331-814a-904567622b3d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
