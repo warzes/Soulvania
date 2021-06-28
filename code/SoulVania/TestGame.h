@@ -2,7 +2,6 @@
 
 #include "Game.h"
 #include "SpriteBatch.h"
-#include "MyFont.h"
 #include "Mario.h"
 
 class TestGame : public Game
@@ -17,6 +16,6 @@ public:
 
 private:
 	std::unique_ptr<SpriteBatch> spriteBatch;
-	std::shared_ptr<MyFont> gameFont;
+	std::shared_ptr<Font> gameFont;
 	std::shared_ptr<Mario> mario;
 };

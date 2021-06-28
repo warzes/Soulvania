@@ -406,7 +406,6 @@
     <ClInclude Include="IDrawable.h" />
     <ClInclude Include="LoadContentException.h" />
     <ClInclude Include="MathHelper.h" />
-    <ClInclude Include="MyFont.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Rect.h" />
     <ClInclude Include="RectF.h" />

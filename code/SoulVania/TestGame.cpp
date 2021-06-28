@@ -21,7 +21,7 @@ void TestGame::LoadContent()
 	spriteBatch = std::make_unique<SpriteBatch>();
 
 	TestAudioManager::LoadContent(*content, { "Jump", "Overworld" });
-	gameFont = content->Load<MyFont>("Roboto.spritefont");
+	gameFont = content->Load<Font>("Roboto.spritefont");
 
 	mario = std::make_shared<Mario>();
 	mario->LoadContent(*content);
@@ -42,7 +42,7 @@ void TestGame::Draw(GameTime gameTime)
 	ClearBackground({(unsigned char)c.R(), (unsigned char)c.G(), (unsigned char)c.B(), 255});
 
 	mario->Draw(*spriteBatch);
-	spriteBatch->DrawString(gameFont->font, "Press arrow keys to move", base::Vector2{ 30, 30 }, base::Color{ 255, 0, 255 });
+	spriteBatch->DrawString(*gameFont, "Press arrow keys to move", base::Vector2{ 30, 30 }, base::Color{ 255, 0, 255 });
 
 	EndDrawing();
 }

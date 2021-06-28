@@ -327,9 +327,6 @@
     <ClInclude Include="TiledMapReader.h">
       <Filter>Engine\Content\TileMap</Filter>
     </ClInclude>
-    <ClInclude Include="MyFont.h">
-      <Filter>Engine\Content</Filter>
-    </ClInclude>
     <ClInclude Include="TestGameObject.h">
       <Filter>Game\Test</Filter>
     </ClInclude>

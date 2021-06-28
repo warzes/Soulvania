@@ -12,9 +12,9 @@ https://github.com/NearHuscarl/Castlevania
 - в том числе и из рейлиба и зависимостей
 
 
-raylib
-	Commits on Jun 27, 2021
-		Minor tweaks
+Update uwp_events.h
+	@raysan5
+	raysan5 committed 11 hours ago
 
 		в raylib добавил 
 			#define PLATFORM_DESKTOP 1
