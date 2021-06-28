@@ -1,0 +1,11 @@
+#Ignore thumbnails created by windows
+Thumbs.db
+
+#Ignore project folders
+/_lib/
+/_obj/
+/*/.vs/
+/*/ipch/
+
+/bin/SoulVania_*.*
+/bin/GameLog.txt

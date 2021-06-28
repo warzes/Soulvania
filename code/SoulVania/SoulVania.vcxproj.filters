@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="glfw_impl.c">
+      <Filter>3rdparty</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\raylib\core.c">
+      <Filter>3rdparty\raylib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\raylib\models.c">
+      <Filter>3rdparty\raylib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\raylib\raudio.c">
+      <Filter>3rdparty\raylib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\raylib\shapes.c">
+      <Filter>3rdparty\raylib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\raylib\text.c">
+      <Filter>3rdparty\raylib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\raylib\textures.c">
+      <Filter>3rdparty\raylib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\raylib\utils.c">
+      <Filter>3rdparty\raylib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="..\3rdparty\raylib\raylib.h">
+      <Filter>3rdparty\raylib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\raylib\rlgl.h">
+      <Filter>3rdparty\raylib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\raylib\camera.h">
+      <Filter>3rdparty\raylib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\raylib\config.h">
+      <Filter>3rdparty\raylib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\raylib\gestures.h">
+      <Filter>3rdparty\raylib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\raylib\raudio.h">
+      <Filter>3rdparty\raylib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\raylib\raymath.h">
+      <Filter>3rdparty\raylib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\raylib\utils.h">
+      <Filter>3rdparty\raylib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\raylib\uwp_events.h">
+      <Filter>3rdparty\raylib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="3rdparty">
+      <UniqueIdentifier>{18f4ba98-578b-4998-b022-7edc97e3174a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdparty\raylib">
+      <UniqueIdentifier>{c58812ea-0f70-449d-ad31-65aa3218faf4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
