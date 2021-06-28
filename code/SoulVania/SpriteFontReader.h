@@ -1,7 +1,7 @@
 #pragma once
 
 #include "AbstractReader.h"
-#include <raylib/raylib.h>
+#include "MyFont.h"
 
 enum class FontStyle
 {
@@ -17,10 +17,10 @@ struct FontDescription
 	FontStyle style;
 };
 
-class SpriteFontReader : public AbstractReader<Font>
+class SpriteFontReader : public AbstractReader<MyFont>
 {
 public:
-	std::shared_ptr<Font> Read(std::string filePath, ContentManager& contentManager) override;
+	std::shared_ptr<MyFont> Read(std::string filePath, ContentManager& contentManager) override;
 
 private:
 	FontDescription ReadFontConfig(std::string configFile);

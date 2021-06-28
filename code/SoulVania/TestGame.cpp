@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "TestGame.h"
+#include "Color.h"
+#include "TestAudioManager.h"
 #include <raylib/raylib.h>
 
 // textures_sprite_button
@@ -16,20 +18,31 @@ void TestGame::Initialize()
 
 void TestGame::LoadContent()
 {
+	spriteBatch = std::make_unique<SpriteBatch>();
+
+	TestAudioManager::LoadContent(*content, { "Jump", "Overworld" });
+	gameFont = content->Load<MyFont>("Roboto.spritefont");
+
+	mario = std::make_shared<Mario>();
+	mario->LoadContent(*content);
 }
 
 void TestGame::Update(GameTime gameTime)
 {
 	auto deltaTime = (float)gameTime.ElapsedGameTime.Seconds();
+
+	mario->Update(deltaTime);
 }
 
 void TestGame::Draw(GameTime gameTime)
 {
 	BeginDrawing();
 
-	ClearBackground(RAYWHITE);
+	auto c = base::Color::LavenderBlue();
+	ClearBackground({(unsigned char)c.R(), (unsigned char)c.G(), (unsigned char)c.B(), 255});
 
-	DrawText("Hello World!", 190, 200, 20, RED);
+	mario->Draw(*spriteBatch);
+	spriteBatch->DrawString(gameFont->font, "Press arrow keys to move", base::Vector2{ 30, 30 }, base::Color{ 255, 0, 255 });
 
 	EndDrawing();
 }

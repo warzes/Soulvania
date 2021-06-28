@@ -313,6 +313,7 @@
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TurnOffAllWarnings</WarningLevel>
       <SDLCheck Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</SDLCheck>
     </ClCompile>
+    <ClCompile Include="AnimatedSprite.cpp" />
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="AnimationFactory.cpp" />
     <ClCompile Include="AnimationFactoryReader.cpp" />
@@ -324,6 +325,10 @@
     <ClCompile Include="DictionaryReader.cpp" />
     <ClCompile Include="FileLogger.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Mario.cpp" />
+    <ClCompile Include="TestAudioManager.cpp" />
+    <ClCompile Include="TestController.cpp" />
+    <ClCompile Include="TestGameObject.cpp" />
     <ClCompile Include="glfw_impl.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
@@ -381,6 +386,7 @@
     <ClInclude Include="..\3rdparty\raylib\utils.h" />
     <ClInclude Include="..\3rdparty\raylib\uwp_events.h" />
     <ClInclude Include="AbstractReader.h" />
+    <ClInclude Include="AnimatedSprite.h" />
     <ClInclude Include="Animation.h" />
     <ClInclude Include="AnimationFactory.h" />
     <ClInclude Include="AnimationFactoryReader.h" />
@@ -392,10 +398,15 @@
     <ClInclude Include="DictionaryReader.h" />
     <ClInclude Include="FileLogger.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Mario.h" />
+    <ClInclude Include="TestAudioManager.h" />
+    <ClInclude Include="TestController.h" />
+    <ClInclude Include="TestGameObject.h" />
     <ClInclude Include="GameTime.h" />
     <ClInclude Include="IDrawable.h" />
     <ClInclude Include="LoadContentException.h" />
     <ClInclude Include="MathHelper.h" />
+    <ClInclude Include="MyFont.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Rect.h" />
     <ClInclude Include="RectF.h" />
@@ -409,6 +420,7 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Stopwatch.h" />
     <ClInclude Include="TestGame.h" />
+    <ClInclude Include="TestSettings.h" />
     <ClInclude Include="TextureReader.h" />
     <ClInclude Include="TextureRegion.h" />
     <ClInclude Include="Tile.h" />

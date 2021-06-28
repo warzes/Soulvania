@@ -63,21 +63,6 @@ void SpriteBatch::Draw(
 
 void SpriteBatch::DrawString(Font& spriteFont, const std::string& text, base::Vector2 position, base::Color color, bool useViewport)
 {
-	//auto textSize = spriteFont.MessureString(text);
-	//auto rect = Rect{};
-
-	//if (useViewport)
-	//	position = graphicsDevice.GetViewport().Project(position);
-
-	//auto x = (int)position.x;
-	//auto y = (int)position.y;
-	//auto textWidth = (int)textSize.x;
-	//auto textHeight = (int)textSize.y;
-
-	//rect.left = x;
-	//rect.top = y;
-	//rect.right = x + textWidth;
-	//rect.bottom = y + textHeight;
-
-	//font->DrawTextA(spriteHandler, text.c_str(), -1, &rect, DT_LEFT, color.Get());
+	Color clr = { (unsigned char)color.R(), (unsigned char)color.G(), (unsigned char)color.B(), 255 };
+	DrawTextEx(spriteFont, text.c_str(), Vector2 { position.x, position.y }, (float)spriteFont.baseSize, 1, clr);
 }

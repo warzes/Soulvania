@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<GameContent>
+
+  <Animations AtlasPath="MarioSpritesheet.xml">
+    <Animation Name="mario_idle" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="mario_walk_01" />
+    </Animation>
+
+    <Animation Name="mario_jump" DefaultTime="100" IsLooping="True">
+      <Frame SpriteID="mario_walk_01" />
+    </Animation>
+
+    <Animation Name="mario_walk" DefaultTime="100" IsLooping="True">
+      <Frame SpriteID="mario_walk_01" />
+      <Frame SpriteID="mario_walk_02" />
+      <Frame SpriteID="mario_walk_03" />
+    </Animation>
+  </Animations>
+
+</GameContent>

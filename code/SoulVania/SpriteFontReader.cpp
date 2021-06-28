@@ -6,7 +6,7 @@
 #include "FileLogger.h"
 #include "pugixml/pugixml.hpp"
 
-std::shared_ptr<Font> SpriteFontReader::Read(std::string configFile, ContentManager& contentManager)
+std::shared_ptr<MyFont> SpriteFontReader::Read(std::string configFile, ContentManager& contentManager)
 {
 	auto options = ReadFontConfig(configFile);
 	auto filePathStr = (Path{ configFile }.parent_path() / options.fontName).string();
@@ -14,10 +14,9 @@ std::shared_ptr<Font> SpriteFontReader::Read(std::string configFile, ContentMana
 	if (!std::filesystem::exists(filePathStr))
 		throw LoadContentException("Font file not found: " + configFile);
 
-	auto filePath = WinHelper::s2ws(filePathStr);
-
-	//Font fontTtf = LoadFontEx("resources/pixantiqua.ttf", options.32, 0, 250);
-	return nullptr;
+	std::shared_ptr<MyFont> fnt(new MyFont());
+	fnt->font = LoadFontEx(filePathStr.c_str(), options.size, 0, 250);
+	return fnt;
 }
 
 FontDescription SpriteFontReader::ReadFontConfig(std::string configFile)

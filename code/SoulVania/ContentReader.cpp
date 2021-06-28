@@ -25,7 +25,7 @@ std::shared_ptr<Sound> ContentReader::ReadAsset<Sound>(std::string filePath)
 }
 
 template<>
-std::shared_ptr<Font> ContentReader::ReadAsset<Font>(std::string filePath)
+std::shared_ptr<MyFont> ContentReader::ReadAsset<MyFont>(std::string filePath)
 {
 	return spriteFontReader.Read(filePath, contentManager);
 }

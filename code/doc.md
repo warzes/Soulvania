@@ -1,3 +1,11 @@
+
+Диздок по идее 2д соула метроинвадии в стиле
+https://dtf.ru/indie/779409-2d-ekshen-platformer-s-krovushkoy-i-pikselyami (и ссылок из комментов)
+tomb of the mask
+
+https://github.com/NearHuscarl/Castlevania
+
+
 - base::Color удалить и использовать raylib::Color
 - base::Vector2 удалить и использовать raylib::Vector2
 - вообще удалять все лишнее
