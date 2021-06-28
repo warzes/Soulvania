@@ -69,6 +69,12 @@
     <ClCompile Include="CppExtensions.cpp">
       <Filter>Engine\Utility</Filter>
     </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="TestGame.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -168,6 +174,15 @@
     <ClInclude Include="CppExtensions.h">
       <Filter>Engine\Utility</Filter>
     </ClInclude>
+    <ClInclude Include="GameTime.h">
+      <Filter>Engine\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="TestGame.h">
+      <Filter>Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="3rdparty">
@@ -193,6 +208,9 @@
     </Filter>
     <Filter Include="3rdparty\fmt">
       <UniqueIdentifier>{28493447-650c-4038-b7d3-8603b3516580}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{b7885470-a081-4fed-b8c4-adb59dd194c7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

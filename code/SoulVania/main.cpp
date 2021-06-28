@@ -1,12 +1,13 @@
 ﻿#include "stdafx.h"
+#include "TestGame.h"
 #include <raylib/raylib.h>
 
 #if _WIN32
 // Prefer the high-performance GPU on switchable GPU systems
 extern "C"
 {
-    __declspec(dllexport) unsigned long NvOptimusEnablement = 1;
-    __declspec(dllexport) int AmdPowerXpressRequestHighPerformance = 1;
+	__declspec(dllexport) unsigned long NvOptimusEnablement = 1;
+	__declspec(dllexport) int AmdPowerXpressRequestHighPerformance = 1;
 }
 
 #pragma comment( lib, "winmm.lib" )
@@ -14,22 +15,24 @@ extern "C"
 
 int main()
 {
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+	TestGame{}.Run();
 
-    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+	/*   const int screenWidth = 800;
+	const int screenHeight = 450;
 
-    SetTargetFPS(60); 
+	InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
 
-    while (!WindowShouldClose())
-    {
-        BeginDrawing();
+	SetTargetFPS(60);
 
-        ClearBackground(RAYWHITE);
+	while (!WindowShouldClose())
+	{
+	BeginDrawing();
 
-        DrawText("Hello World!", 190, 200, 20, RED);
+	ClearBackground(RAYWHITE);
 
-        EndDrawing();
-    }
-    CloseWindow();
+	DrawText("Hello World!", 190, 200, 20, RED);
+
+	EndDrawing();
+	}
+	CloseWindow();*/
 }
