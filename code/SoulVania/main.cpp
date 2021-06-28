@@ -1,4 +1,5 @@
 ﻿#include "stdafx.h"
+#include <raylib/raylib.h>
 
 #if _WIN32
 // Prefer the high-performance GPU on switchable GPU systems

@@ -21,7 +21,7 @@ struct Rect
 	bool operator==(Rect other);
 	bool operator!=(Rect other);
 	bool Contains(Rect value);
-	bool Contains(Vector2 value);
+	bool Contains(base::Vector2 value);
 	bool Intersects(Rect value);
 	bool TouchesOrIntersects(Rect value);
 

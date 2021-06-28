@@ -26,7 +26,7 @@ struct RectF
 	bool operator==(RectF other);
 	bool operator!=(RectF other);
 	bool Contains(RectF value);
-	bool Contains(Vector2 value);
+	bool Contains(base::Vector2 value);
 	bool Intersects(RectF value);
 	bool TouchesOrIntersects(RectF value);
 

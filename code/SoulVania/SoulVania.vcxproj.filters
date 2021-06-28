@@ -45,6 +45,30 @@
     <ClCompile Include="..\3rdparty\pugixml\pugixml.cpp">
       <Filter>3rdparty\pugixml</Filter>
     </ClCompile>
+    <ClCompile Include="Stopwatch.cpp">
+      <Filter>Engine\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeSpan.cpp">
+      <Filter>Engine\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="FileLogger.cpp">
+      <Filter>Engine\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\fmt\format.cc">
+      <Filter>3rdparty\fmt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\fmt\posix.cc">
+      <Filter>3rdparty\fmt</Filter>
+    </ClCompile>
+    <ClCompile Include="WinHelper.cpp">
+      <Filter>Engine\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Engine\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="CppExtensions.cpp">
+      <Filter>Engine\Utility</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -99,6 +123,51 @@
     <ClInclude Include="..\3rdparty\pugixml\pugixml.hpp">
       <Filter>3rdparty\pugixml</Filter>
     </ClInclude>
+    <ClInclude Include="Stopwatch.h">
+      <Filter>Engine\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeSpan.h">
+      <Filter>Engine\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="FileLogger.h">
+      <Filter>Engine\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\fmt\color.h">
+      <Filter>3rdparty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\fmt\core.h">
+      <Filter>3rdparty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\fmt\format.h">
+      <Filter>3rdparty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\fmt\format-inl.h">
+      <Filter>3rdparty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\fmt\ostream.h">
+      <Filter>3rdparty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\fmt\posix.h">
+      <Filter>3rdparty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\fmt\printf.h">
+      <Filter>3rdparty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\fmt\ranges.h">
+      <Filter>3rdparty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\fmt\time.h">
+      <Filter>3rdparty\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="WinHelper.h">
+      <Filter>Engine\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Engine\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="CppExtensions.h">
+      <Filter>Engine\Utility</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="3rdparty">
@@ -115,6 +184,15 @@
     </Filter>
     <Filter Include="3rdparty\pugixml">
       <UniqueIdentifier>{3d627ea4-27cb-4331-814a-904567622b3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Time">
+      <UniqueIdentifier>{f019e345-b59b-4803-bc62-fb832ba59105}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Utility">
+      <UniqueIdentifier>{c0d5892d-1d91-412c-a738-0aa69f7e5c67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdparty\fmt">
+      <UniqueIdentifier>{28493447-650c-4038-b7d3-8603b3516580}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

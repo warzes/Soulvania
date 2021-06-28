@@ -69,7 +69,7 @@ bool Rect::Contains(Rect value)
 		this->bottom >= value.bottom);
 }
 
-bool Rect::Contains(Vector2 value)
+bool Rect::Contains(base::Vector2 value)
 {
 	return (
 		this->left <= value.x &&

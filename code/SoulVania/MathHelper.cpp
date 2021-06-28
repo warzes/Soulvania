@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "MathHelper.h"
 
+#define PI 3.14159265358979323846f
+
 double const MathHelper::TWO_PI = PI * 2.0f;
 double const MathHelper::PI_180 = PI / 180.0f;
 

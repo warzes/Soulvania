@@ -68,7 +68,7 @@ bool RectF::Contains(RectF value)
 		this->bottom >= value.bottom);
 }
 
-bool RectF::Contains(Vector2 value)
+bool RectF::Contains(base::Vector2 value)
 {
 	return (
 		this->left <= value.x &&
