@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<GameContent>
+
+  <Dictionary
+    Name="Zombie"
+    Speed="115.0"
+    Health="1"
+    Attack="2"
+    Exp="100">
+  </Dictionary>
+
+</GameContent>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<GameContent>
+
+  <Spritesheet TexturePath="Brazier.png">
+    <Sprite ID="brazier_01">
+      <SpriteFrame Left="0" Top="0" Width="32" Height="64" />
+    </Sprite>
+
+    <Sprite ID="brazier_02">
+      <SpriteFrame Left="32" Top="0" Width="32" Height="64" />
+    </Sprite>
+  </Spritesheet>
+
+</GameContent>

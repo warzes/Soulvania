@@ -144,6 +144,342 @@
     <ClCompile Include="TestAudioManager.cpp">
       <Filter>Game\Test</Filter>
     </ClCompile>
+    <ClCompile Include="CastlevaniaGame.cpp">
+      <Filter>Game\Castlevania</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Game\Castlevania\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioManager.cpp">
+      <Filter>Game\Castlevania\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="AbstractScene.cpp">
+      <Filter>Game\Castlevania\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectFactory.cpp">
+      <Filter>Game\Castlevania\Models\Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Game\Castlevania\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Direction.cpp">
+      <Filter>Engine\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Body.cpp">
+      <Filter>Engine\Collisions\Body</Filter>
+    </ClCompile>
+    <ClCompile Include="Subject.cpp">
+      <Filter>Game\Castlevania\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Facing.cpp">
+      <Filter>Game\Castlevania\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Health.cpp">
+      <Filter>Game\Castlevania\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Door.cpp">
+      <Filter>Game\Castlevania\Models\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger.cpp">
+      <Filter>Game\Castlevania\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Whip.cpp">
+      <Filter>Game\Castlevania\Models\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="RangedWeapon.cpp">
+      <Filter>Game\Castlevania\Models\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="PowerupGenerator.cpp">
+      <Filter>Game\Castlevania\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Powerup.cpp">
+      <Filter>Game\Castlevania\Models\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionGrid.cpp">
+      <Filter>Game\Castlevania\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionCell.cpp">
+      <Filter>Game\Castlevania\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Zombie.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Panther.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Fishman.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="VampireBat.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="GiantBat.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="BreakableWall.cpp">
+      <Filter>Game\Castlevania\Models\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="Container.cpp">
+      <Filter>Game\Castlevania\Models\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="HolyWater.cpp">
+      <Filter>Game\Castlevania\Models\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="MoneyBag.cpp">
+      <Filter>Game\Castlevania\Models\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnArea.cpp">
+      <Filter>Game\Castlevania\Models\Spawners</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnPoint.cpp">
+      <Filter>Game\Castlevania\Models\Spawners</Filter>
+    </ClCompile>
+    <ClCompile Include="WaterArea.cpp">
+      <Filter>Game\Castlevania\Models\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectFactory.cpp">
+      <Filter>Game\Castlevania\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="ZombieSpawnArea.cpp">
+      <Filter>Game\Castlevania\Models\Spawners</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuScene.cpp">
+      <Filter>Game\Castlevania\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="GameplayScene.cpp">
+      <Filter>Game\Castlevania\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage.cpp">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Cutscene.cpp">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="DevTool.cpp">
+      <Filter>Game\Castlevania\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Hud.cpp">
+      <Filter>Game\Castlevania</Filter>
+    </ClCompile>
+    <ClCompile Include="MapManager.cpp">
+      <Filter>Game\Castlevania\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOverScene.cpp">
+      <Filter>Game\Castlevania\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderingSystem.cpp">
+      <Filter>Game\Castlevania\Models\Systems\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationRenderingSystem.cpp">
+      <Filter>Game\Castlevania\Models\Systems\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaCollisionSystem.cpp">
+      <Filter>Game\Castlevania\Models\Spawners</Filter>
+    </ClCompile>
+    <ClCompile Include="BigFlameEffect.cpp">
+      <Filter>Game\Castlevania\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="BossFightCutscene.cpp">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="BoundingBoxRenderingSystem.cpp">
+      <Filter>Game\Castlevania\Models\Systems\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Game\Castlevania\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionSystem.cpp">
+      <Filter>Game\Castlevania\Models\Systems\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlSystem.cpp">
+      <Filter>Game\Castlevania\Models\Systems\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CrossCutscene.cpp">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="DebrisEffect.cpp">
+      <Filter>Game\Castlevania\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="DoorRenderingSystem.cpp">
+      <Filter>Game\Castlevania\Models\Systems\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="MovementSystem.cpp">
+      <Filter>Game\Castlevania\Models\Systems\Movement</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityMovementSystem.cpp">
+      <Filter>Game\Castlevania\Models\Systems\Movement</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityRenderingSystem.cpp">
+      <Filter>Game\Castlevania\Models\Systems\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="FishmanControlSystem.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="FishmanRenderingSystem.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="FishmanResponseSystem.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="ResponseSystem.cpp">
+      <Filter>Game\Castlevania\Models\Systems\CollisionResponse</Filter>
+    </ClCompile>
+    <ClCompile Include="FishmanSpawnArea.cpp">
+      <Filter>Game\Castlevania\Models\Spawners</Filter>
+    </ClCompile>
+    <ClCompile Include="FlameEffect.cpp">
+      <Filter>Game\Castlevania\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="FlashingMoneyTextEffect.cpp">
+      <Filter>Game\Castlevania\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOverCutscene.cpp">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="GiantBatCollisionSystem.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="GiantBatControlSystem.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="GiantBatMovementSystem.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="GiantBatRenderingSystem.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="GiantBatResponseSystem.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="GoToCastleCutscene.cpp">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="GroundResponseSystem.cpp">
+      <Filter>Game\Castlevania\Models\Systems\CollisionResponse</Filter>
+    </ClCompile>
+    <ClCompile Include="HiddenMoneyBagCutscene.cpp">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="HolyWaterRenderingSystem.cpp">
+      <Filter>Game\Castlevania\Models\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="HolyWaterResponseSystem.cpp">
+      <Filter>Game\Castlevania\Models\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="IntroCutscene.cpp">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemRenderingSystem.cpp">
+      <Filter>Game\Castlevania\Models\Systems\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelCompletedCutscene.cpp">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="MoneyTextEffect.cpp">
+      <Filter>Game\Castlevania\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="NextMapCutscene.cpp">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="NextRoomCutscene.cpp">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="PantherCollisionSystem.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="PantherControlSystem.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="PantherRenderingSystem.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="PantherResponseSystem.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCollisionSystem.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerMovementSystem.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerRenderingSystem.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerResponseSystem.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PoisonResponseSystem.cpp">
+      <Filter>Game\Castlevania\Models\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponCollisionSystem.cpp">
+      <Filter>Game\Castlevania\Models\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponResponseSystem.cpp">
+      <Filter>Game\Castlevania\Models\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="WhipFlashingRenderingSystem.cpp">
+      <Filter>Game\Castlevania\Models\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="WhipRenderingSystem.cpp">
+      <Filter>Game\Castlevania\Models\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="PowerupResponseSystem.cpp">
+      <Filter>Game\Castlevania\Models\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="ResetCutscene.cpp">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleCollisionSystem.cpp">
+      <Filter>Game\Castlevania\Models\Systems\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleMovementSystem.cpp">
+      <Filter>Game\Castlevania\Models\Systems\Movement</Filter>
+    </ClCompile>
+    <ClCompile Include="SparkEffect.cpp">
+      <Filter>Game\Castlevania\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="WaterEffect.cpp">
+      <Filter>Game\Castlevania\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnAreaResponseSystem.cpp">
+      <Filter>Game\Castlevania\Models\Spawners</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteRenderingSystem.cpp">
+      <Filter>Game\Castlevania\Models\Systems\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="StandardCollisionSystem.cpp">
+      <Filter>Game\Castlevania\Models\Systems\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="StopwatchCutscene.cpp">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClCompile>
+    <ClCompile Include="VampireBatRenderingSystem.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="ZombieResponseSystem.cpp">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="VampireBatSpawnArea.cpp">
+      <Filter>Game\Castlevania\Models\Spawners</Filter>
+    </ClCompile>
+    <ClCompile Include="WaterAreaRenderingSystem.cpp">
+      <Filter>Game\Castlevania\Models\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="WaveMovementSystem.cpp">
+      <Filter>Game\Castlevania\Models\Systems\Movement</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -339,6 +675,450 @@
     <ClInclude Include="TestAudioManager.h">
       <Filter>Game\Test</Filter>
     </ClInclude>
+    <ClInclude Include="CastlevaniaGame.h">
+      <Filter>Game\Castlevania</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Game\Castlevania\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioManager.h">
+      <Filter>Game\Castlevania\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Audios.h">
+      <Filter>Game\Castlevania\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="IUpdateable.h">
+      <Filter>Engine\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractScene.h">
+      <Filter>Game\Castlevania\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Game\Castlevania\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectFactory.h">
+      <Filter>Game\Castlevania\Models\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectId.h">
+      <Filter>Game\Castlevania\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Game\Castlevania\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="IColliable.h">
+      <Filter>Engine\Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="IGameObject.h">
+      <Filter>Game\Castlevania\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Direction.h">
+      <Filter>Engine\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionResult.h">
+      <Filter>Engine\Collisions\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionData.h">
+      <Filter>Engine\Collisions\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCollisionResult.h">
+      <Filter>Engine\Collisions\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="Body.h">
+      <Filter>Engine\Collisions\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="IObserver.h">
+      <Filter>Game\Castlevania\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Subject.h">
+      <Filter>Game\Castlevania\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="IControlSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="IReceiver.h">
+      <Filter>Game\Castlevania\Models\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="IMovementSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="ICollisionSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="ICollisionResponseSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\CollisionResponse</Filter>
+    </ClInclude>
+    <ClInclude Include="Facing.h">
+      <Filter>Game\Castlevania\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionGridData.h">
+      <Filter>Game\Castlevania\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Game\Castlevania\Models\Characters\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerData.h">
+      <Filter>Game\Castlevania\Models\Characters\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Health.h">
+      <Filter>Game\Castlevania\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Door.h">
+      <Filter>Game\Castlevania\Models\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>Game\Castlevania\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="TriggerType.h">
+      <Filter>Game\Castlevania\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger.h">
+      <Filter>Game\Castlevania\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="NearbyObjects.h">
+      <Filter>Game\Castlevania\Models\Characters\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Checkpoint.h">
+      <Filter>Game\Castlevania\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="IAttackable.h">
+      <Filter>Game\Castlevania\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Whip.h">
+      <Filter>Game\Castlevania\Models\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="RangedWeapon.h">
+      <Filter>Game\Castlevania\Models\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateData.h">
+      <Filter>Game\Castlevania\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectCollection.h">
+      <Filter>Game\Castlevania\Models\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="IRenderingSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="PowerupGenerator.h">
+      <Filter>Game\Castlevania\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Powerup.h">
+      <Filter>Game\Castlevania\Models\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionGrid.h">
+      <Filter>Game\Castlevania\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionCell.h">
+      <Filter>Game\Castlevania\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionObject.h">
+      <Filter>Game\Castlevania\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Zombie.h">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Panther.h">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Fishman.h">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="VampireBat.h">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="GiantBat.h">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="IBoss.h">
+      <Filter>Game\Castlevania\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="StageEvent.h">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="BreakableWall.h">
+      <Filter>Game\Castlevania\Models\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="Container.h">
+      <Filter>Game\Castlevania\Models\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="HolyWater.h">
+      <Filter>Game\Castlevania\Models\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="MoneyBag.h">
+      <Filter>Game\Castlevania\Models\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="ISpawner.h">
+      <Filter>Game\Castlevania\Models\Spawners</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnArea.h">
+      <Filter>Game\Castlevania\Models\Spawners</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeConverter.h">
+      <Filter>Game\Castlevania\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="MapSettings.h">
+      <Filter>Game\Castlevania\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnPoint.h">
+      <Filter>Game\Castlevania\Models\Spawners</Filter>
+    </ClInclude>
+    <ClInclude Include="WaterArea.h">
+      <Filter>Game\Castlevania\Models\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="IEffect.h">
+      <Filter>Game\Castlevania\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectFactory.h">
+      <Filter>Game\Castlevania\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="ZombieSpawnArea.h">
+      <Filter>Game\Castlevania\Models\Spawners</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuScene.h">
+      <Filter>Game\Castlevania\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="GameplayScene.h">
+      <Filter>Game\Castlevania\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Cutscene.h">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="StageObject.h">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="DevTool.h">
+      <Filter>Game\Castlevania\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Hud.h">
+      <Filter>Game\Castlevania</Filter>
+    </ClInclude>
+    <ClInclude Include="GameplayData.h">
+      <Filter>Game\Castlevania\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="MapManager.h">
+      <Filter>Game\Castlevania\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOverScene.h">
+      <Filter>Game\Castlevania\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderingSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationRenderingSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Animations.h">
+      <Filter>Game\Castlevania\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaCollisionSystem.h">
+      <Filter>Game\Castlevania\Models\Spawners</Filter>
+    </ClInclude>
+    <ClInclude Include="BigFlameEffect.h">
+      <Filter>Game\Castlevania\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="BossFightCutscene.h">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="BoundingBoxRenderingSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Game\Castlevania\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>Game\Castlevania\Models\Characters\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CrossCutscene.h">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="DebrisEffect.h">
+      <Filter>Game\Castlevania\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="DoorRenderingSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="MovementSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityMovementSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityRenderingSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="FishmanControlSystem.h">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="FishmanRenderingSystem.h">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="FishmanResponseSystem.h">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="ResponseSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\CollisionResponse</Filter>
+    </ClInclude>
+    <ClInclude Include="FishmanSpawnArea.h">
+      <Filter>Game\Castlevania\Models\Spawners</Filter>
+    </ClInclude>
+    <ClInclude Include="FlameEffect.h">
+      <Filter>Game\Castlevania\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="FlashingMoneyTextEffect.h">
+      <Filter>Game\Castlevania\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOverCutscene.h">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="GiantBatCollisionSystem.h">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="GiantBatControlSystem.h">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="GiantBatMovementSystem.h">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="GiantBatRenderingSystem.h">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="GiantBatResponseSystem.h">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="GoToCastleCutscene.h">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="GroundResponseSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\CollisionResponse</Filter>
+    </ClInclude>
+    <ClInclude Include="HiddenMoneyBagCutscene.h">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="HolyWaterRenderingSystem.h">
+      <Filter>Game\Castlevania\Models\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="HolyWaterResponseSystem.h">
+      <Filter>Game\Castlevania\Models\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="IntroCutscene.h">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemRenderingSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelCompletedCutscene.h">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="MoneyTextEffect.h">
+      <Filter>Game\Castlevania\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="NextMapCutscene.h">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="NextRoomCutscene.h">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="PantherResponseSystem.h">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="PantherCollisionSystem.h">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="PantherControlSystem.h">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="PantherRenderingSystem.h">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerCollisionSystem.h">
+      <Filter>Game\Castlevania\Models\Characters\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerMovementSystem.h">
+      <Filter>Game\Castlevania\Models\Characters\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerRenderingSystem.h">
+      <Filter>Game\Castlevania\Models\Characters\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerResponseSystem.h">
+      <Filter>Game\Castlevania\Models\Characters\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="WhipRenderingSystem.h">
+      <Filter>Game\Castlevania\Models\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="PoisonResponseSystem.h">
+      <Filter>Game\Castlevania\Models\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponCollisionSystem.h">
+      <Filter>Game\Castlevania\Models\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponResponseSystem.h">
+      <Filter>Game\Castlevania\Models\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="WhipFlashingRenderingSystem.h">
+      <Filter>Game\Castlevania\Models\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="PowerupResponseSystem.h">
+      <Filter>Game\Castlevania\Models\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="ResetCutscene.h">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleCollisionSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleMovementSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="SparkEffect.h">
+      <Filter>Game\Castlevania\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="WaterEffect.h">
+      <Filter>Game\Castlevania\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnAreaResponseSystem.h">
+      <Filter>Game\Castlevania\Models\Spawners</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteRenderingSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="StandardCollisionSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="StopwatchCutscene.h">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="ZombieResponseSystem.h">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="VampireBatRenderingSystem.h">
+      <Filter>Game\Castlevania\Models\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="VampireBatSpawnArea.h">
+      <Filter>Game\Castlevania\Models\Spawners</Filter>
+    </ClInclude>
+    <ClInclude Include="WaterAreaRenderingSystem.h">
+      <Filter>Game\Castlevania\Models\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="WaveMovementSystem.h">
+      <Filter>Game\Castlevania\Models\Systems\Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="RespawnPoint.h">
+      <Filter>Game\Castlevania\Scenes\Stages</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="3rdparty">
@@ -385,6 +1165,75 @@
     </Filter>
     <Filter Include="Game\Test">
       <UniqueIdentifier>{a3113050-d682-48b1-8d70-db6313e84b9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania">
+      <UniqueIdentifier>{c8d7b4ec-be33-4e17-bc1a-cda12f5b9083}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania\Scenes">
+      <UniqueIdentifier>{a22c8cd5-3a22-42e2-b71e-9956747afa69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania\Utilities">
+      <UniqueIdentifier>{b7f5f8e5-c633-499e-a0e0-c4e6c8210eb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania\Models">
+      <UniqueIdentifier>{a3236d03-f9d6-4e48-8af3-015795a16ac7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania\Models\Factories">
+      <UniqueIdentifier>{8513e82e-4f59-4de3-abdc-74c3a6de0c9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Collisions">
+      <UniqueIdentifier>{0b249393-bd95-4225-a855-32547e897141}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Collisions\Body">
+      <UniqueIdentifier>{8e51b1fa-129e-43f9-abff-afcd859a7298}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania\Models\Systems">
+      <UniqueIdentifier>{be62cfae-a05e-4952-bddd-843e635f649d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania\Models\Systems\Control">
+      <UniqueIdentifier>{e0dcd06f-1666-4fe3-9391-3f13fe3ac6e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania\Models\Systems\Movement">
+      <UniqueIdentifier>{145a9290-0ccd-44a6-b367-22ec7feeb597}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania\Models\Characters">
+      <UniqueIdentifier>{8bce6334-a22f-4244-b59c-c72373c4fd23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania\Models\Characters\Player">
+      <UniqueIdentifier>{690cb483-52f7-4690-89e8-4c82c4ef3bd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania\Models\Items">
+      <UniqueIdentifier>{d32fb6e6-9b21-43ec-b3b0-916220c1af1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania\Models\Weapons">
+      <UniqueIdentifier>{09e3c91f-43b4-4b3b-a1fe-aa517117d279}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania\Models\Systems\Rendering">
+      <UniqueIdentifier>{5d23981b-5d2f-48ff-93f6-05b5f6619524}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania\Models\Characters\Enemies">
+      <UniqueIdentifier>{4af3238b-f5a8-4177-9bef-6a71002b4a91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania\Scenes\Stages">
+      <UniqueIdentifier>{7c38e942-91e7-4a49-b25f-fb9f091627f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania\Models\Spawners">
+      <UniqueIdentifier>{aac865af-6179-48f4-9cf5-b961149916ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania\Models\Areas">
+      <UniqueIdentifier>{8d5a7ff4-5c0f-4345-879c-a9724e33debd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania\Effects">
+      <UniqueIdentifier>{617f5d44-4012-4d7c-b1d2-ff7778996896}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania\Settings">
+      <UniqueIdentifier>{67226c5d-0367-4773-923e-a61013fa3d8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania\Models\Systems\Collision">
+      <UniqueIdentifier>{436ed6ce-3d08-4498-b0e5-9e0ae9bf4f0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Castlevania\Models\Systems\CollisionResponse">
+      <UniqueIdentifier>{ba64c353-e7ce-43a4-b6bd-a24db54435b3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

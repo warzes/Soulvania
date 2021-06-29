@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<GameContent>
+
+  <Animations AtlasPath="Simon.atlas.xml">
+    <Animation Name="idle" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="walk_01" />
+    </Animation>
+
+    <Animation Name="attack" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="attack_01" />
+      <Frame SpriteID="attack_02" />
+      <Frame SpriteID="attack_03" />
+    </Animation>
+
+    <Animation Name="jump" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="jump_01" />
+    </Animation>
+
+    <Animation Name="duck" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="duck_01" />
+    </Animation>
+
+    <Animation Name="walk" DefaultTime="150" IsLooping="True">
+      <Frame Time="100" SpriteID="walk_01" />
+      <Frame Time="140" SpriteID="walk_02" />
+      <Frame Time="100" SpriteID="walk_03" />
+      <Frame Time="140" SpriteID="walk_04" />
+    </Animation>
+
+    <Animation Name="go_upstairs" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="go_upstairs_01" />
+      <Frame SpriteID="go_upstairs_02" />
+    </Animation>
+
+    <Animation Name="go_downstairs" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="go_downstairs_01" />
+      <Frame SpriteID="go_downstairs_02" />
+    </Animation>
+
+    <Animation Name="idle_upstairs" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="go_upstairs_02" />
+    </Animation>
+
+    <Animation Name="idle_downstairs" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="go_downstairs_02" />
+    </Animation>
+
+    <Animation Name="go_upstairs_attack" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="go_upstairs_attack_01" />
+      <Frame SpriteID="go_upstairs_attack_02" />
+      <Frame SpriteID="go_upstairs_attack_03" />
+    </Animation>
+
+    <Animation Name="go_downstairs_attack" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="go_downstairs_attack_01" />
+      <Frame SpriteID="go_downstairs_attack_02" />
+      <Frame SpriteID="go_downstairs_attack_03" />
+    </Animation>
+
+    <Animation Name="jump_attack" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="attack_01" />
+      <Frame SpriteID="attack_02" />
+      <Frame SpriteID="attack_03" />
+    </Animation>
+
+    <Animation Name="duck_attack" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="duck_attack_01" />
+      <Frame SpriteID="duck_attack_02" />
+      <Frame SpriteID="duck_attack_03" />
+    </Animation>
+
+    <Animation Name="turn_backward" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="turn_backward_01" />
+    </Animation>
+
+    <Animation Name="take_damage" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="take_damage_01" />
+    </Animation>
+
+    <Animation Name="die" DefaultTime="300" IsLooping="False">
+      <Frame SpriteID="die_01" />
+      <Frame SpriteID="die_02" Time="1" />
+    </Animation>
+
+    <!-- Flashing animation for frame 01 in walk animation -->
+    <Animation Name="flash_walk_01" DefaultTime="30" IsLooping="True">
+      <Frame SpriteID="walk_flash_red_01" />
+      <Frame SpriteID="walk_flash_blue_01" />
+      <Frame SpriteID="walk_flash_magenta_01" />
+      <Frame SpriteID="walk_01" /> <!-- yellow -->
+    </Animation>
+
+    <Animation Name="flash_walk_02" DefaultTime="30" IsLooping="True">
+      <Frame SpriteID="walk_flash_red_02" />
+      <Frame SpriteID="walk_flash_blue_02" />
+      <Frame SpriteID="walk_flash_magenta_02" />
+      <Frame SpriteID="walk_02" /> <!-- yellow -->
+    </Animation>
+
+    <Animation Name="flash_walk_03" DefaultTime="30" IsLooping="True">
+      <Frame SpriteID="walk_flash_red_03" />
+      <Frame SpriteID="walk_flash_blue_03" />
+      <Frame SpriteID="walk_flash_magenta_03" />
+      <Frame SpriteID="walk_03" /> <!-- yellow -->
+    </Animation>
+
+    <Animation Name="flash_walk_04" DefaultTime="30" IsLooping="True">
+      <Frame SpriteID="walk_flash_red_02" />
+      <Frame SpriteID="walk_flash_blue_02" />
+      <Frame SpriteID="walk_flash_magenta_02" />
+      <Frame SpriteID="walk_02" /> <!-- yellow -->
+    </Animation>
+
+
+
+
+    <Animation Name="idle_invisible" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="walk_invisible_01" />
+    </Animation>
+
+    <Animation Name="attack_invisible" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="attack_invisible_01" />
+      <Frame SpriteID="attack_invisible_02" />
+      <Frame SpriteID="attack_invisible_03" />
+    </Animation>
+
+    <Animation Name="jump_invisible" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="jump_invisible_01" />
+    </Animation>
+
+    <Animation Name="duck_invisible" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="duck_invisible_01" />
+    </Animation>
+
+    <Animation Name="walk_invisible" DefaultTime="150" IsLooping="True">
+      <Frame Time="100" SpriteID="walk_invisible_01" />
+      <Frame Time="140" SpriteID="walk_invisible_02" />
+      <Frame Time="100" SpriteID="walk_invisible_03" />
+      <Frame Time="140" SpriteID="walk_invisible_04" />
+    </Animation>
+
+    <Animation Name="go_upstairs_invisible" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="go_upstairs_invisible_01" />
+      <Frame SpriteID="go_upstairs_invisible_02" />
+    </Animation>
+
+    <Animation Name="go_downstairs_invisible" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="go_downstairs_invisible_01" />
+      <Frame SpriteID="go_downstairs_invisible_02" />
+    </Animation>
+
+    <Animation Name="idle_upstairs_invisible" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="go_upstairs_invisible_02" />
+    </Animation>
+
+    <Animation Name="idle_downstairs_invisible" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="go_downstairs_invisible_02" />
+    </Animation>
+
+    <Animation Name="go_upstairs_attack_invisible" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="go_upstairs_attack_invisible_01" />
+      <Frame SpriteID="go_upstairs_attack_invisible_02" />
+      <Frame SpriteID="go_upstairs_attack_invisible_03" />
+    </Animation>
+
+    <Animation Name="go_downstairs_attack_invisible" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="go_downstairs_attack_invisible_01" />
+      <Frame SpriteID="go_downstairs_attack_invisible_02" />
+      <Frame SpriteID="go_downstairs_attack_invisible_03" />
+    </Animation>
+
+    <Animation Name="jump_attack_invisible" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="attack_invisible_01" />
+      <Frame SpriteID="attack_invisible_02" />
+      <Frame SpriteID="attack_invisible_03" />
+    </Animation>
+
+    <Animation Name="duck_attack_invisible" DefaultTime="100" IsLooping="False">
+      <Frame SpriteID="duck_attack_invisible_01" />
+      <Frame SpriteID="duck_attack_invisible_02" />
+      <Frame SpriteID="duck_attack_invisible_03" />
+    </Animation>
+
+  </Animations>
+
+</GameContent>

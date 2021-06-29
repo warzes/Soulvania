@@ -2,8 +2,10 @@
 #include "Game.h"
 #include <raylib/raylib.h>
 
-const int screenWidth = 320;
-const int screenHeight = 240;
+//const int screenWidth = 320;
+//const int screenHeight = 240;
+const int screenWidth = 512;
+const int screenHeight = 448;
 
 Game::Game()
 {

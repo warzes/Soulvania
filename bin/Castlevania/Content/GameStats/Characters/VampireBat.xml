@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<GameContent>
+
+  <Dictionary
+    Name="VampireBat"
+    Speed="135.0"
+    Health="1"
+    Attack="2"
+    Exp="200">
+  </Dictionary>
+
+</GameContent>

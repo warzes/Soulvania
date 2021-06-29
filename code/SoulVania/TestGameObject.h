@@ -4,7 +4,7 @@
 #include "ContentManager.h"
 #include "AnimatedSprite.h"
 
-enum class Direction
+enum class TestDirection
 {
 	Left,
 	Right,
@@ -29,7 +29,7 @@ public:
 protected:
 	base::Vector2 position;
 	base::Vector2 velocity;
-	Direction direction;
+	TestDirection direction;
 
 	std::unique_ptr<AnimatedSprite> sprite;
 };

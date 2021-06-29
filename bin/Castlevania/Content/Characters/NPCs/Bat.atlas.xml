@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<GameContent>
+
+  <Spritesheet TexturePath="Bat.png">
+    <Sprite ID="fly_01">
+      <SpriteFrame Left="0" Top="0" Width="18" Height="18" />
+    </Sprite>
+
+    <Sprite ID="fly_02">
+      <SpriteFrame Left="18" Top="0" Width="18" Height="18" />
+    </Sprite>
+  </Spritesheet>
+
+</GameContent>

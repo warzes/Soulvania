@@ -8,9 +8,11 @@
 
 //#include <Windows.h>
 
+#include <cassert>
 #include <cstdlib>
 #include <cmath>
 #include <cctype>
+
 
 #include <locale>
 #include <algorithm> 
@@ -18,6 +20,7 @@
 #include <random>
 #include <memory>
 #include <filesystem>
+#include <functional>
 #include <fstream>
 #include <sstream>
 #include <string>
@@ -25,6 +28,7 @@
 #include <list>
 #include <stack>
 #include <any>
+#include <set>
 #include <map>
 #include <unordered_map>
 #include <typeindex>

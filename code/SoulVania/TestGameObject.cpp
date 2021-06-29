@@ -6,7 +6,7 @@ TestGameObject::TestGameObject()
 	position = base::Vector2::Zero();
 	velocity = base::Vector2::Zero();
 
-	direction = Direction::Right;
+	direction = TestDirection::Right;
 }
 
 void TestGameObject::SetPosition(float x, float y)

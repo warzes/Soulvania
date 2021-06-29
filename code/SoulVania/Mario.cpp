@@ -128,7 +128,7 @@ void Mario::WalkLeft()
 {
 	state = State::WALKING_LEFT;
 	velocity.x = -MARIO_WALKING_SPEED;
-	direction = Direction::Left;
+	direction = TestDirection::Left;
 	sprite->Play(MARIO_WALK);
 }
 
@@ -136,13 +136,13 @@ void Mario::WalkRight()
 {
 	state = State::WALKING_RIGHT;
 	velocity.x = MARIO_WALKING_SPEED;
-	direction = Direction::Right;
+	direction = TestDirection::Right;
 	sprite->Play(MARIO_WALK);
 }
 
 void Mario::Draw(SpriteBatch& spriteBatch)
 {
-	auto effect = direction == Direction::Left ? SpriteEffects::FlipHorizontally : SpriteEffects::None;
+	auto effect = direction == TestDirection::Left ? SpriteEffects::FlipHorizontally : SpriteEffects::None;
 	auto& texture = sprite->GetTextureRegion().GetTexture();
 	auto srcRectangle = sprite->GetTextureRegion().GetFrameRectangle();
 

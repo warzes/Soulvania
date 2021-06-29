@@ -24,42 +24,7 @@ namespace base
 		static auto oneVector = Vector2{ 1, 1 };
 		return oneVector;
 	}
-
-	Vector2 Vector2::operator*(const Vector2& value) const
-	{
-		return Vector2{ x * value.x, y * value.y };
-	}
-
-	Vector2 Vector2::operator+(const Vector2& value) const
-	{
-		return Vector2{ this->x + value.x, this->y + value.y };
-	}
-
-	Vector2 Vector2::operator-(const Vector2& value) const
-	{
-		return Vector2{ this->x - value.x, this->y - value.y };
-	}
-
-	Vector2 Vector2::operator+(const float value) const
-	{
-		return Vector2{ this->x + value, this->y + value };
-	}
-
-	Vector2 Vector2::operator-(const float value) const
-	{
-		return Vector2{ this->x - value, this->y - value };
-	}
-
-	Vector2 Vector2::operator*(const float value) const
-	{
-		return Vector2{ this->x * value, this->y * value };
-	}
-
-	Vector2 Vector2::operator/(const float value) const
-	{
-		return Vector2{ this->x / value, this->y / value };
-	}
-
+		
 	float Vector2::Distance(Vector2 value1, Vector2 value2)
 	{
 		auto dx = value1.x - value2.x;

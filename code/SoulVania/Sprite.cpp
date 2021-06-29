@@ -24,7 +24,7 @@ TextureRegion Sprite::GetTextureRegion()
 	return textureRegion;
 }
 
-RectF Sprite::GetFrameRectangle(Vector2 position)
+RectF Sprite::GetFrameRectangle(base::Vector2 position)
 {
 	auto spriteFrame = textureRegion.GetFrameRectangle();
 	auto rect = RectF{};
@@ -37,7 +37,7 @@ RectF Sprite::GetFrameRectangle(Vector2 position)
 	return rect;
 }
 
-RectF Sprite::GetBoundingRectangle(Vector2 position)
+RectF Sprite::GetBoundingRectangle(base::Vector2 position)
 {
 	auto spriteFrame = textureRegion.GetFrameRectangle();
 	auto spriteBoundary = textureRegion.GetBoundingRectangle();

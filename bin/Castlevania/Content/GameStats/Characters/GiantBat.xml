@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<GameContent>
+
+  <Dictionary
+    Name="GiantBat"
+    Speed="150.0"
+    DiveSpeed="275.0"
+    Health="16"
+    Attack="2"
+    Exp="3000"
+    ThreatZoneWidth="120"
+    ThreatZoneHeight="80"
+    AttackZoneWidth="650"
+    AttackZoneHeight="900">
+  </Dictionary>
+
+</GameContent>

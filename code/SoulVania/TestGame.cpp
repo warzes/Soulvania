@@ -4,8 +4,6 @@
 #include "TestAudioManager.h"
 #include <raylib/raylib.h>
 
-// textures_sprite_button
-
 TestGame::TestGame()
 {
 	content->SetRootDirectory("MarioSample/Content");

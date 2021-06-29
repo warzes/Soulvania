@@ -1,6 +1,6 @@
 ﻿#include "stdafx.h"
 #include "TestGame.h"
-#include <raylib/raylib.h>
+#include "CastlevaniaGame.h"
 
 #if _WIN32
 // Prefer the high-performance GPU on switchable GPU systems
@@ -15,24 +15,6 @@ extern "C"
 
 int main()
 {
-	TestGame{}.Run();
-
-	/*   const int screenWidth = 800;
-	const int screenHeight = 450;
-
-	InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
-
-	SetTargetFPS(60);
-
-	while (!WindowShouldClose())
-	{
-	BeginDrawing();
-
-	ClearBackground(RAYWHITE);
-
-	DrawText("Hello World!", 190, 200, 20, RED);
-
-	EndDrawing();
-	}
-	CloseWindow();*/
+	//TestGame{}.Run();
+	CastlevaniaGame{}.Run();
 }

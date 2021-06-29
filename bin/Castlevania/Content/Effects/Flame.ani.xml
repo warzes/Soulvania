@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<GameContent>
+
+  <Animations AtlasPath="Flame.atlas.xml">
+    <Animation Name="Flame" DefaultTime="80" IsLooping="False">
+      <Frame SpriteID="flame_01" />
+      <Frame SpriteID="flame_02" />
+      <Frame SpriteID="flame_03" />
+    </Animation>
+
+    <Animation Name="FlameLoop" DefaultTime="110" IsLooping="True">
+      <Frame SpriteID="flame_01" />
+      <Frame SpriteID="flame_02" />
+      <Frame SpriteID="flame_03" />
+    </Animation>
+  </Animations>
+
+</GameContent>
