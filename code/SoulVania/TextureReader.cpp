@@ -3,6 +3,6 @@
 
 std::shared_ptr<Texture> TextureReader::Read(std::string filePathStr, ContentManager& contentManager)
 {
-	return nullptr;
-	//return std::make_shared<Texture>(texture, info);
+	Texture2D tex = LoadTexture(filePathStr.c_str());
+	return std::make_shared<Texture2D>(tex);
 }

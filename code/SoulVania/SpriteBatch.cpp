@@ -24,11 +24,11 @@ void SpriteBatch::Draw(
 	SpriteEffects effects,
 	bool useViewport)
 {
-	auto rect = Rect{};
+	auto source = Rectangle{};
 	if (rectPtr == nullptr) // if null, draws full texture
-		rect = Rect{ 0, 0, texture.width, texture.height };
+		source = Rectangle{ 0, 0, (float)texture.width, (float)texture.height };
 	else
-		rect = *rectPtr;
+		source = Rectangle{ (float)rectPtr->left, (float)rectPtr->top, (float)rectPtr->right, (float)rectPtr->bottom };
 
 	auto scaleVec = base::Vector2{};
 	if (effects == SpriteEffects::FlipHorizontally)
@@ -38,27 +38,11 @@ void SpriteBatch::Draw(
 	else // SpriteEffects::None
 		scaleVec = base::Vector2{ 1, 1 } *scale;
 
-	//if (useViewport)
-	//	position = graphicsDevice.GetViewport().Project(position);
-	//auto center = Vector2{ position.x + rect.Width() / 2, position.y + rect.Height() / 2 };
+	Rectangle dest = { position.x, position.y, source.width * scaleVec.x, source.height * scaleVec.y };
+	Vector2 origin = { 0.0f, 0.0f };
+	Color clr = { (unsigned char)color.R(), (unsigned char)color.G(), (unsigned char)color.B(), 255 };
 
-	//auto oldMatrix = Matrix{};
-	//auto newMatrix = Matrix{};
-
-	//spriteHandler->GetTransform(&oldMatrix);
-	//D3DXMatrixTransformation2D(
-	//	&newMatrix, // the result matrix
-	//	&center,    // scaling center vector
-	//	0.0f,       // scaling rotation value
-	//	&scaleVec,  // scaling vector
-	//	&center,    // rotating center/pivot vector
-	//	rotation,   // rotating angle (radians)
-	//	nullptr     // translating vector
-	//);
-
-	//spriteHandler->SetTransform(&newMatrix);
-	//spriteHandler->Draw(texture.Get(), &rect, nullptr, &Vector3{ position }, color.Get());
-	//spriteHandler->SetTransform(&oldMatrix);
+	DrawTexturePro(texture, source, dest, origin, rotation, clr);
 }
 
 void SpriteBatch::DrawString(Font& spriteFont, const std::string& text, base::Vector2 position, base::Color color, bool useViewport)

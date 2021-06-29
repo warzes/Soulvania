@@ -12,7 +12,13 @@ https://github.com/NearHuscarl/Castlevania
 - в том числе и из рейлиба и зависимостей
 
 
-Update uwp_events.h
+идеи для рейлиба
+	в заголовке core.c удалить glfw window
+	добавить функцию отрисовки части текстуры с масштабом и вращением
+
+
+Commits on Jun 28, 2021
+	Update uwp_events.h
 	@raysan5
 	raysan5 committed 11 hours ago
 

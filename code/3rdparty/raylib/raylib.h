@@ -76,6 +76,9 @@
 *
 **********************************************************************************************/
 
+#define PLATFORM_DESKTOP 1
+#define GRAPHICS_API_OPENGL_33 1
+
 #ifndef RAYLIB_H
 #define RAYLIB_H
 

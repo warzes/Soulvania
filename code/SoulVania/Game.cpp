@@ -27,6 +27,7 @@ void Game::Run()
 		Update(gameTime);
 		Render(gameTime);
 	}
+	CloseAudioDevice();     // Close audio device
 	CloseWindow();
 }
 
@@ -34,6 +35,8 @@ void Game::Initialize()
 {
 	InitWindow(screenWidth, screenHeight, "Soulvania");
 	SetTargetFPS(60);
+
+	InitAudioDevice();      // Initialize audio device
 
 	LoadContent();
 }

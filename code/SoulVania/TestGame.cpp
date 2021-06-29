@@ -25,6 +25,8 @@ void TestGame::LoadContent()
 
 	mario = std::make_shared<Mario>();
 	mario->LoadContent(*content);
+
+	TestAudioManager::PlaySong("Overworld");
 }
 
 void TestGame::Update(GameTime gameTime)
