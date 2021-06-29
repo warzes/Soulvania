@@ -24,19 +24,28 @@ void SpriteBatch::Draw(
 	SpriteEffects effects,
 	bool useViewport)
 {
+
+	// TODO: Rect хранит именно позиции права и лева, а Rectangle хранит ширину и высоту
 	auto source = Rectangle{};
 	if (rectPtr == nullptr) // if null, draws full texture
 		source = Rectangle{ 0, 0, (float)texture.width, (float)texture.height };
 	else
-		source = Rectangle{ (float)rectPtr->left, (float)rectPtr->top, (float)rectPtr->right, (float)rectPtr->bottom };
+		source = Rectangle{ (float)rectPtr->left, (float)rectPtr->top, (float)(rectPtr->right - rectPtr->left), (float)(rectPtr->bottom - rectPtr->top) };
 
 	auto scaleVec = base::Vector2{};
 	if (effects == SpriteEffects::FlipHorizontally)
+	{
 		scaleVec = base::Vector2{ -1, 1 } *scale;
+		source.width *= -1;
+	}
+		
 	else if (effects == SpriteEffects::FlipVertically)
+	{
 		scaleVec = base::Vector2{ 1, -1 } *scale;
+		source.height *= -1;
+	}		
 	else // SpriteEffects::None
-		scaleVec = base::Vector2{ 1, 1 } *scale;
+		scaleVec = base::Vector2{ 1, 1 } * scale;
 
 	Rectangle dest = { position.x, position.y, source.width * scaleVec.x, source.height * scaleVec.y };
 	Vector2 origin = { 0.0f, 0.0f };

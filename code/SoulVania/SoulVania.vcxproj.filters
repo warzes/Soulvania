@@ -138,9 +138,6 @@
     <ClCompile Include="AnimatedSprite.cpp">
       <Filter>Engine\Content\Animations</Filter>
     </ClCompile>
-    <ClCompile Include="TestController.cpp">
-      <Filter>Game\Test</Filter>
-    </ClCompile>
     <ClCompile Include="Mario.cpp">
       <Filter>Game\Test</Filter>
     </ClCompile>
@@ -332,9 +329,6 @@
     </ClInclude>
     <ClInclude Include="AnimatedSprite.h">
       <Filter>Engine\Content\Animations</Filter>
-    </ClInclude>
-    <ClInclude Include="TestController.h">
-      <Filter>Game\Test</Filter>
     </ClInclude>
     <ClInclude Include="Mario.h">
       <Filter>Game\Test</Filter>

@@ -327,7 +327,6 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Mario.cpp" />
     <ClCompile Include="TestAudioManager.cpp" />
-    <ClCompile Include="TestController.cpp" />
     <ClCompile Include="TestGameObject.cpp" />
     <ClCompile Include="glfw_impl.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
@@ -400,7 +399,6 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="Mario.h" />
     <ClInclude Include="TestAudioManager.h" />
-    <ClInclude Include="TestController.h" />
     <ClInclude Include="TestGameObject.h" />
     <ClInclude Include="GameTime.h" />
     <ClInclude Include="IDrawable.h" />

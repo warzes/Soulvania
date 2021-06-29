@@ -60,8 +60,6 @@ TiledMapObjectGroups TiledMap::GetMapObjects()
 
 void TiledMap::Draw(SpriteExtensions& spriteBatch)
 {
-	//auto camBbox = spriteBatch.GetGraphicsDevice().GetViewport().Bounds();
-
 	auto camBbox = RectF{ 0.0f, 0.0f, (float)GetScreenWidth(), (float)GetScreenHeight() };
 
 	auto startRow = (int)camBbox.top / tileHeight;

@@ -1,7 +1,6 @@
 #pragma once
 
 #include "TestGameObject.h"
-#include "TestController.h"
 
 enum class State
 {
@@ -14,9 +13,7 @@ enum class State
 class Mario : public TestGameObject
 {
 public:
-	Mario();
 	State GetState();
-	TestController* GetController();
 
 	void LoadContent(ContentManager& content) override;
 	void Update(float deltaTime) override;
@@ -30,7 +27,6 @@ public:
 
 private:
 	State state;
-	TestController controller;
 
 	void UpdateState();
 	void ResolveCollision(float deltaTime);

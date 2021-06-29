@@ -3,19 +3,11 @@
 #include "TestSettings.h"
 #include "TestAudioManager.h"
 
-Mario::Mario() : controller{ *this }
-{
-}
-
 State Mario::GetState()
 {
 	return state;
 }
 
-TestController* Mario::GetController()
-{
-	return &controller;
-}
 
 void Mario::LoadContent(ContentManager& content)
 {
@@ -27,6 +19,51 @@ void Mario::LoadContent(ContentManager& content)
 
 void Mario::Update(float deltaTime)
 {
+	// Input
+	switch (GetState())
+	{
+	case State::IDLE:
+		if (IsKeyPressed(KEY_SPACE))
+			Jump();
+		if (IsKeyPressed(KEY_RIGHT))
+			WalkRight();
+		else if (IsKeyPressed(KEY_LEFT))
+			WalkLeft();
+		break;
+	}
+
+	if (IsKeyDown(KEY_SPACE))
+	{
+		switch (GetState())
+		{
+		case State::IDLE:
+		case State::WALKING_LEFT:
+		case State::WALKING_RIGHT:
+			Jump();
+			break;
+		}
+	}
+	
+	if (IsKeyUp(KEY_LEFT))
+	{
+		switch (GetState())
+		{
+		case State::WALKING_LEFT:
+			Idle();
+			break;
+		}
+	}
+
+	if (IsKeyUp(KEY_RIGHT))
+	{
+		switch (GetState())
+		{
+		case State::WALKING_RIGHT:
+			Idle();
+			break;
+		}
+	}
+
 	UpdateState();
 	ResolveCollision(deltaTime);
 }
@@ -108,6 +145,8 @@ void Mario::Draw(SpriteBatch& spriteBatch)
 	auto effect = direction == Direction::Left ? SpriteEffects::FlipHorizontally : SpriteEffects::None;
 	auto& texture = sprite->GetTextureRegion().GetTexture();
 	auto srcRectangle = sprite->GetTextureRegion().GetFrameRectangle();
+
+	printf("x=%d y=%d w=%d h=%d\n", srcRectangle.left, srcRectangle.top, srcRectangle.right, srcRectangle.bottom);
 
 	sprite->Update();
 	spriteBatch.Draw(texture, position, &srcRectangle, base::Color::White(), 0.0f, base::Vector2::One(), effect);
