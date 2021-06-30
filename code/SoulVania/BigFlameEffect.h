@@ -9,7 +9,7 @@ class BigFlameEffect : public IEffect
 public:
 	BigFlameEffect(std::shared_ptr<AnimationFactory> flameAnimation);
 
-	void Show(Vector2 position) override;
+	void Show(base::Vector2 position) override;
 	bool IsFinished() override;
 
 	void Update(GameTime gameTime) override;
@@ -17,7 +17,7 @@ public:
 
 private:
 	bool isFinished;
-	Vector2 position;
+	base::Vector2 position;
 	std::unique_ptr<AnimatedSprite> flame;
 
 	Stopwatch flameLifespanTimer;

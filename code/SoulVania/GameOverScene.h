@@ -1,6 +1,7 @@
 #pragma once
 
 #include "AbstractScene.h"
+#include "Vector2.h"
 #include <raylib/raylib.h>
 
 class GameOverScene : public AbstractScene

@@ -9,9 +9,6 @@ class Controller : public ControlSystem
 public:
 	Controller(Player& player, ObjectFactory& objectFactory);
 
-	//void OnKeyDown(int keyCode);
-	//void OnKeyUp(int keyCode);
-
 	void Update(UpdateData& updateData) override;
 
 private:
@@ -22,6 +19,6 @@ private:
 	bool IsHoldingLeftAndRight();
 	bool IsHoldingUpAndDown();
 
-	bool PressSubweaponKeys(int keyCode);
+	bool PressSubweaponKeys();
 	void UseSubweapon();
 };

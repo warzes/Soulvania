@@ -43,7 +43,9 @@ void RenderingSystem::DrawBoundingBox(SpriteExtensions& spriteBatch, RectF bound
 {
 	auto position = base::Vector2{ boundingBox.X(), boundingBox.Y() };
 
-	spriteBatch.Draw(*bboxTexture, position, &(Rect)boundingBox, color, 0.0f, base::Vector2::One(), SpriteEffects::None);
+	Rect rect = (Rect)boundingBox;
+
+	spriteBatch.Draw(*bboxTexture, position, &rect, color, 0.0f, base::Vector2::One(), SpriteEffects::None);
 }
 
 void RenderingSystem::Update(GameTime gameTime)

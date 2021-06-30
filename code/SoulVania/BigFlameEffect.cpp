@@ -12,11 +12,11 @@ BigFlameEffect::BigFlameEffect(std::shared_ptr<AnimationFactory> flameAnimation)
 	isFinished = true;
 }
 
-void BigFlameEffect::Show(Vector2 position)
+void BigFlameEffect::Show(base::Vector2 position)
 {
 	auto flameRect = flame->GetTextureRegion().GetFrameRectangle();
 
-	this->position = Vector2{
+	this->position = base::Vector2{
 		position.x - flameRect.Width() / 2,
 		position.y - flameRect.Height() / 2 };
 

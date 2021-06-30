@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "SpriteBatch.h"
+#include "Camera.h"
 
 void SpriteBatch::Begin(unsigned long flag)
 {
@@ -47,6 +48,10 @@ void SpriteBatch::Draw(
 	else // SpriteEffects::None
 		scaleVec = base::Vector2{ 1, 1 } * scale;
 
+	if (useViewport && base::Camera::thisCamera)
+		position = base::Camera::thisCamera->GetViewport().Project(position);
+
+
 	Rectangle dest = { position.x, position.y, source.width * scaleVec.x, source.height * scaleVec.y };
 	Vector2 origin = { 0.0f, 0.0f };
 	Color clr = { (unsigned char)color.R(), (unsigned char)color.G(), (unsigned char)color.B(), 255 };
@@ -56,6 +61,9 @@ void SpriteBatch::Draw(
 
 void SpriteBatch::DrawString(Font& spriteFont, const std::string& text, base::Vector2 position, base::Color color, bool useViewport)
 {
+	if (useViewport && base::Camera::thisCamera)
+		position = base::Camera::thisCamera->GetViewport().Project(position);
+
 	Color clr = { (unsigned char)color.R(), (unsigned char)color.G(), (unsigned char)color.B(), 255 };
 	DrawTextEx(spriteFont, text.c_str(), Vector2 { position.x, position.y }, (float)spriteFont.baseSize, 1, clr);
 }

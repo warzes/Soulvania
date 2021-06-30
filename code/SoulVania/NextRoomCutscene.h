@@ -22,7 +22,7 @@ private:
 	Player& player;
 	CollisionGrid& grid;
 	ObjectFactory& objectFactory;
-	Camera& camera;
+	base::Camera& camera;
 	Door& door;
 	Direction doorHitDirection;
 

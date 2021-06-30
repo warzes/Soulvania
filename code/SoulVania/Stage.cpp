@@ -44,7 +44,7 @@ void Stage::OnNotify(Subject& subject, int event)
 	newEvent = std::make_unique<StageEvent>(event, subject);
 }
 
-Camera* Stage::GetCamera()
+base::Camera* Stage::GetCamera()
 {
 	return camera.get();
 }
@@ -62,7 +62,7 @@ Rect Stage::GetActiveArea()
 void Stage::LoadObjectsWithin(Rect area)
 {
 	auto& mapManager = gameplayScene.GetMapManager();
-	auto& gridObjects = mapManager.GetMapObjectsInArea(currentMap, area);
+	auto gridObjects = mapManager.GetMapObjectsInArea(currentMap, area);
 
 	grid->PopulateObjects(gridObjects);
 
@@ -116,7 +116,6 @@ void Stage::ClearObjectsWithin(Rect area, std::set<GameObject*> exceptionList)
 
 void Stage::Initialize()
 {
-	auto& graphicsDevice = gameplayScene.GetSceneManager().GetGraphicsDevice();
 	auto& mapManager = gameplayScene.GetMapManager();
 
 	player = gameplayScene.GetPlayer();
@@ -126,10 +125,10 @@ void Stage::Initialize()
 	data = gameplayScene.GetData();
 	data->timeLeft.ResetLastSecond(); // When change to the next map, the last second is reset
 
-	mapManager.SetWorldPosition(Vector2{ 0, (float)hud->GetHeight() });
+	mapManager.SetWorldPosition(base::Vector2{ 0, (float)hud->GetHeight() });
 
 	map = mapManager.GetTiledMap(currentMap);
-	camera = std::make_unique<Camera>(graphicsDevice);
+	camera = std::make_unique<base::Camera>();
 
 	auto cellWidth = (int)(camera->GetBounds().Width() / 2);
 	auto cellHeight = (int)(camera->GetBounds().Height() / 2);
@@ -188,7 +187,7 @@ void Stage::Draw(SpriteExtensions& spriteBatch)
 	}
 }
 
-Rect Stage::GetCurrentArea(Vector2 position)
+Rect Stage::GetCurrentArea(base::Vector2 position)
 {
 	auto& stageAreas = stageObject->stageAreas;
 
@@ -298,7 +297,7 @@ void Stage::UpdateGameplay(UpdateData& updateData)
 	// is wider than other sprites which make the camera glitching when getting
 	// position from GetOriginPosition()
 	if (player->GetState() == ObjectState::NORMAL)
-		camera->LookAt(player->GetOriginPosition(), Scrolling::Horizontally);
+		camera->LookAt(player->GetOriginPosition(), base::Scrolling::Horizontally);
 
 	UpdateGameObjects(updateData);
 
@@ -314,7 +313,7 @@ void Stage::UpdateGameplay(UpdateData& updateData)
 
 void Stage::DrawGameplay(SpriteExtensions& spriteBatch)
 {
-	map->Draw(spriteBatch);
+	map->Draw(spriteBatch, camera->GetBounds());
 	hud->Draw(spriteBatch);
 
 	grid->GetCellsFromBoundingBox(camera->GetBounds(), [&](CollisionCell& cell, int col, int row)

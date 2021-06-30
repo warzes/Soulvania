@@ -8,78 +8,6 @@ Controller::Controller(Player& player, ObjectFactory& objectFactory) :
 {
 }
 
-//void Controller::OnKeyDown(int keyCode)
-//{
-//	if (!enabled)
-//		return;
-//
-//	if (player.IsAttacking())
-//		return;
-//
-//	switch (player.GetMoveState())
-//	{
-//	case MoveState::IDLE:
-//		if (keyCode == Button::Jump)
-//			player.Jump();
-//		else if (PressSubweaponKeys(keyCode))
-//			UseSubweapon();
-//		else if (keyCode == Button::Attack)
-//			player.Attack();
-//		break;
-//
-//	case MoveState::WALKING:
-//		if (IsHoldingLeftAndRight())
-//			player.Idle();
-//		else if (PressSubweaponKeys(keyCode))
-//			UseSubweapon();
-//		else if (keyCode == Button::Attack)
-//			player.Attack();
-//		else if (keyCode == Button::Jump)
-//			player.Jump();
-//		else if (keyCode == Button::Duck)
-//			player.Duck();
-//		break;
-//
-//	case MoveState::IDLE_UPSTAIRS:
-//	case MoveState::IDLE_DOWNSTAIRS:
-//		if (PressSubweaponKeys(keyCode))
-//			UseSubweapon();
-//		else if (keyCode == Button::Attack)
-//			player.Attack();
-//		break;
-//
-//	case MoveState::JUMPING:
-//	case MoveState::HOVERING:
-//	case MoveState::FALLING:
-//	case MoveState::LANDING:
-//		if (PressSubweaponKeys(keyCode))
-//			UseSubweapon();
-//		else if (keyCode == Button::Attack)
-//			player.Attack();
-//		break;
-//
-//	case MoveState::DUCKING:
-//		if (keyCode == Button::WalkLeft)
-//			player.SetFacing(Facing::Left);
-//		else if (keyCode == Button::WalkRight)
-//			player.SetFacing(Facing::Right);
-//		else if (PressSubweaponKeys(keyCode))
-//			UseSubweapon();
-//		else if (keyCode == Button::Attack)
-//			player.Attack();
-//		break;
-//	}
-//}
-//
-//void Controller::OnKeyUp(int keyCode)
-//{
-//	if (!enabled)
-//		return;
-//
-//	if (player.IsAttacking())
-//		return;
-//}
-
 void Controller::Update(UpdateData& updateData)
 {
 	if (!enabled)
@@ -90,7 +18,8 @@ void Controller::Update(UpdateData& updateData)
 
 	switch (player.GetMoveState())
 	{
-	case MoveState::IDLE:
+	case MoveState::IDLE:	
+
 		if (IsHoldingLeftAndRight() || IsHoldingUpAndDown())
 			break;
 		else if (IsKeyDown(Button::WalkLeft))
@@ -103,16 +32,31 @@ void Controller::Update(UpdateData& updateData)
 			player.WalkToStairs();
 		else if (IsKeyDown(Button::Duck))
 			player.Duck();
+
+		else if (IsKeyPressed(Button::Jump))
+			player.Jump();
+		else if (PressSubweaponKeys())
+			UseSubweapon();
+		else if (IsKeyPressed(Button::Attack))
+			player.Attack();
+
 		break;
 
 	case MoveState::IDLE_UPSTAIRS:
 	case MoveState::IDLE_DOWNSTAIRS:
+
+		if (PressSubweaponKeys())
+			UseSubweapon();
+		else if (IsKeyPressed(Button::Attack))
+			player.Attack();
+
 		if (IsHoldingUpAndDown())
 			break;
 		else if (IsKeyDown(Button::GoUpstair))
 			player.GoUpstairs();
 		else if (IsKeyDown(Button::GoDownstair))
-			player.GoDownstairs();
+			player.GoDownstairs();	
+
 		break;
 
 	case MoveState::WALKING:
@@ -120,6 +64,17 @@ void Controller::Update(UpdateData& updateData)
 			player.Idle();
 		if (IsKeyUp(Button::WalkRight) && player.GetFacing() == Facing::Right)
 			player.Idle();
+
+		if (IsHoldingLeftAndRight())
+			player.Idle();
+		else if (PressSubweaponKeys())
+			UseSubweapon();
+		else if (IsKeyPressed(Button::Attack))
+			player.Attack();
+		else if (IsKeyPressed(Button::Jump))
+			player.Jump();
+		else if (IsKeyPressed(Button::Duck))
+			player.Duck();
 		break;
 
 	case MoveState::DUCKING:
@@ -127,6 +82,26 @@ void Controller::Update(UpdateData& updateData)
 			player.Idle();
 		if (IsHoldingUpAndDown())
 			player.Idle();
+
+		if (IsKeyDown(Button::WalkLeft))
+			player.SetFacing(Facing::Left);
+		else if (IsKeyDown(Button::WalkRight))
+			player.SetFacing(Facing::Right);
+		else if (PressSubweaponKeys())
+			UseSubweapon();
+		else if (IsKeyPressed(Button::Attack))
+			player.Attack();
+
+		break;
+
+	case MoveState::JUMPING:
+	case MoveState::HOVERING:
+	case MoveState::FALLING:
+	case MoveState::LANDING:
+		if (PressSubweaponKeys())
+			UseSubweapon();
+		else if (IsKeyPressed(Button::Attack))
+			player.Attack();
 		break;
 	}
 }
@@ -141,9 +116,9 @@ bool Controller::IsHoldingUpAndDown()
 	return IsKeyDown(Button::Duck) && IsKeyDown(Button::GoUpstair);
 }
 
-bool Controller::PressSubweaponKeys(int keyCode)
+bool Controller::PressSubweaponKeys()
 {
-	if (keyCode == Button::Attack)
+	if (IsKeyDown(Button::Attack))
 	{
 		if (IsKeyDown(Button::GoUpstair))
 			return true;

@@ -36,11 +36,10 @@ void MenuScene::LoadContent()
 	menuBatSprite = std::make_unique<AnimatedSprite>(animationFactory);
 	menuBatSprite->Play("fly_out");
 
-	auto viewport = sceneManager.GetGraphicsDevice().GetViewport();
-	auto startGameTextSize = menuFont->MessureString(startGameText);
+	auto startGameTextSize = MeasureTextEx(*menuFont, startGameText.c_str(), menuFont->baseSize, 1); // TODO:
 
-	startGameTextPosition.x = (viewport.width - startGameTextSize.x) / 2;
-	startGameTextPosition.y = (viewport.height - startGameTextSize.y) / 2 + 35;
+	startGameTextPosition.x = (GetScreenWidth() - startGameTextSize.x) / 2;
+	startGameTextPosition.y = (GetScreenHeight() - startGameTextSize.y) / 2 + 35;
 
 	copyrightTextPosition.x = startGameTextPosition.x - 80;
 	copyrightTextPosition.y = startGameTextPosition.y + 60;

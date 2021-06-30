@@ -38,7 +38,7 @@ public:
 
 	void OnNotify(Subject& subject, int event);
 
-	Camera* GetCamera();
+	base::Camera* GetCamera();
 	Hud* GetHud();
 	Rect GetActiveArea();
 
@@ -68,7 +68,7 @@ private:
 	std::unique_ptr<StageEvent> newEvent;
 
 	std::shared_ptr<TiledMap> map;
-	std::unique_ptr<Camera> camera;
+	std::unique_ptr<base::Camera> camera;
 	std::shared_ptr<Hud> hud;
 	std::shared_ptr<GameplayData> data;
 	std::unique_ptr<DevTool> devTool;
@@ -78,7 +78,7 @@ private:
 	std::unique_ptr<CollisionGrid> grid;
 	std::shared_ptr<Player> player; // Our player need special attention
 
-	Rect GetCurrentArea(Vector2 position);
+	Rect GetCurrentArea(base::Vector2 position);
 	void SetCurrentCutscene(GameState gameState);
 	void LoadMap();
 	void Reset(); // after player losing 1 live

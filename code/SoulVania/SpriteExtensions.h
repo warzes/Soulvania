@@ -3,6 +3,7 @@
 #include "SpriteBatch.h"
 #include "Transform.h"
 
+
 class SpriteExtensions : public SpriteBatch
 {
 public:

@@ -18,7 +18,7 @@ struct Hud::HudData
 
 Hud::Hud()
 {
-	width = graphicsDevice.GetViewport().width;
+	width = GetScreenWidth();
 	height = HUD_HEIGHT;
 	data = std::make_unique<HudData>();
 

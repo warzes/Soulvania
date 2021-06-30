@@ -36,7 +36,7 @@ void BoundingBoxRenderingSystem::Draw(SpriteExtensions& spriteBatch)
 		auto topLine = RectF{ boundingBox.left, boundingBox.top, boundingBox.Width(), 1 };
 		auto rightLine = RectF{ boundingBox.right, boundingBox.top, 1, boundingBox.Height() };
 		auto bottomLine = RectF{ boundingBox.left, boundingBox.bottom, boundingBox.Width(), 1 };
-		auto borderColor = Color::DimGray();
+		auto borderColor = base::Color::DimGray();
 
 		DrawBoundingBox(spriteBatch, leftLine, borderColor);
 		DrawBoundingBox(spriteBatch, topLine, borderColor);

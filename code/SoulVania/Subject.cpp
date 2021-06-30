@@ -16,7 +16,7 @@ void Subject::RemoveObserver(IObserver& observer)
 	}
 }
 
-Subject Subject::Empty()
+Subject& Subject::Empty()
 {
 	static auto emptySubject = Subject{};
 	return emptySubject;

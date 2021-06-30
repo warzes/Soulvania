@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "SpriteExtensions.h"
+#include "Camera.h"
 
 void SpriteExtensions::Draw(Sprite sprite, base::Vector2 position, bool useViewport)
 {
@@ -20,14 +21,13 @@ void SpriteExtensions::Draw(Sprite sprite, base::Vector2 position, float rotatio
 		auto color = sprite.GetColor() * sprite.GetAlpha();
 		auto effects = sprite.GetEffect();
 
-		//if (useViewport)
-		//{
-		//	auto viewportRect = graphicsDevice.GetViewport().Bounds();
-		//	auto spriteRect = sprite.GetFrameRectangle(position);
-
-		//	if (!viewportRect.TouchesOrIntersects(spriteRect)) // Dont draw if object is outside of viewport
-		//		return;
-		//}
+		if (useViewport && base::Camera::thisCamera)
+		{
+			auto viewportRect = base::Camera::thisCamera->GetBounds(); // TODO: hack
+			auto spriteRect = sprite.GetFrameRectangle(position);
+			if (!viewportRect.TouchesOrIntersects(spriteRect)) // Dont draw if object is outside of viewport
+				return;
+		}
 
 		Draw(texture, position, &spriteFrame, color, rotation, scale, effects, useViewport);
 	}

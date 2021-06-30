@@ -3,6 +3,7 @@
 #include "SceneManager.h"
 #include "GameplayScene.h"
 #include "AudioManager.h"
+#include <raylib/raylib.h>
 
 constexpr auto GAME_OVER_TEXT = "GAME OVER";
 constexpr auto CONTINUE_TEXT = "CONTINUE";
@@ -20,11 +21,10 @@ void GameOverScene::LoadContent()
 	font = content.Load<Font>("Fonts/MainFont.font.xml");
 	heartTexture = content.Load<Texture>("Hud/Heart.png");
 
-	auto viewport = sceneManager.GetGraphicsDevice().GetViewport();
-	auto gameOverTextSize = font->MessureString(GAME_OVER_TEXT);
+	auto gameOverTextSize = MeasureTextEx(*font, GAME_OVER_TEXT, font->baseSize, 1); // TODO:
 
-	gameOverTextPosition.x = (viewport.width - gameOverTextSize.x) / 2;
-	gameOverTextPosition.y = (viewport.height - gameOverTextSize.y) / 2;
+	gameOverTextPosition.x = (GetScreenWidth() - gameOverTextSize.x) / 2;
+	gameOverTextPosition.y = (GetScreenHeight() - gameOverTextSize.y) / 2;
 
 	continueTextPosition.x = gameOverTextPosition.x + 12;
 	continueTextPosition.y = gameOverTextPosition.y + 80;
@@ -37,7 +37,7 @@ void GameOverScene::LoadContent()
 
 void GameOverScene::Update(GameTime gameTime)
 {
-	if (InputHelper::IsKeyDown(DIK_DOWN) || InputHelper::IsKeyDown(DIK_UP))
+	if (IsKeyDown(KEY_DOWN) || IsKeyDown(KEY_UP))
 	{
 		if (currentOption == CONTINUE_TEXT)
 			currentOption = END_TEXT;
@@ -45,7 +45,7 @@ void GameOverScene::Update(GameTime gameTime)
 			currentOption = CONTINUE_TEXT;
 	}
 
-	if (InputHelper::IsKeyDown(DIK_RETURN))
+	if (IsKeyDown(KEY_ENTER))
 	{
 		if (currentOption == CONTINUE_TEXT)
 		{

@@ -58,9 +58,9 @@ TiledMapObjectGroups TiledMap::GetMapObjects()
 	return objects;
 }
 
-void TiledMap::Draw(SpriteExtensions& spriteBatch)
+void TiledMap::Draw(SpriteExtensions& spriteBatch, const RectF& camBbox)
 {
-	auto camBbox = RectF{ 0.0f, 0.0f, (float)GetScreenWidth(), (float)GetScreenHeight() };
+	//auto camBbox = RectF{ 0.0f, 0.0f, (float)GetScreenWidth(), (float)GetScreenHeight() };
 
 	auto startRow = (int)camBbox.top / tileHeight;
 	auto endRow = (int)camBbox.bottom / tileHeight;

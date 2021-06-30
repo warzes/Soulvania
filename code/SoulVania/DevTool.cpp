@@ -33,7 +33,7 @@ DevTool::DevTool(Stage& stage) :
 void DevTool::LoadContent(ContentManager& content)
 {
 	effectFactory = std::make_unique<EffectFactory>(content);
-	debugFont = content.Load<SpriteFont>("Fonts/DebugFont.font.xml");
+	debugFont = content.Load<Font>("Fonts/DebugFont.font.xml");
 	blockSpritePaths = { "TiledMaps/Stage_01/Block.png", "TiledMaps/Stage_01/Block_01.png", "TiledMaps/Stage_01/Block_02.png" };
 
 	auto playerSprite = content.Load<Spritesheet>("Characters/Players/Simon.atlas.xml")->at("walk_01");
@@ -149,18 +149,18 @@ void DevTool::LoadContent(ContentManager& content)
 
 void DevTool::Update(SceneManager& sceneManager)
 {
-	if (InputHelper::IsKeyDown(DIK_NUMPAD1))
+	if (IsKeyDown(KEY_KP_1))
 	{
 		AudioManager::StopAll();
 		sceneManager.SetNextScene(Scene::MENU);
 	}
-	else if (InputHelper::IsKeyDown(DIK_NUMPAD2))
+	else if (IsKeyDown(KEY_KP_2))
 	{
 		AudioManager::StopAll();
 		auto& scene = sceneManager.SetNextScene(Scene::GAMEPLAY);
 		dynamic_cast<GameplayScene&>(scene).NextStage(Map::COURTYARD);
 	}
-	else if (InputHelper::IsKeyDown(DIK_NUMPAD3))
+	else if (IsKeyDown(KEY_KP_3))
 	{
 		AudioManager::StopAll();
 		sceneManager.SetNextScene(Scene::GAMEOVER);
@@ -170,7 +170,7 @@ void DevTool::Update(SceneManager& sceneManager)
 void DevTool::Update(UpdateData& updatData)
 {
 	// Update keyboard input
-	if (InputHelper::IsKeyDown(DIK_ESCAPE))
+	if (IsKeyDown(KEY_ESCAPE))
 		IsDebugging = !IsDebugging;
 
 	if (!IsDebugging)
@@ -178,60 +178,60 @@ void DevTool::Update(UpdateData& updatData)
 
 	auto checkpoints = stage.stageObject->locations;
 
-	if (InputHelper::IsKeyDown(DIK_TAB))
+	if (IsKeyDown(KEY_TAB))
 		SetCategory(PLAYER);
-	else if (InputHelper::IsKeyDown(DIK_Q))
+	else if (IsKeyDown(KEY_Q))
 		SetCategory(ENEMY);
-	else if (InputHelper::IsKeyDown(DIK_W))
+	else if (IsKeyDown(KEY_W))
 		SetCategory(CONTAINER);
-	else if (InputHelper::IsKeyDown(DIK_E))
+	else if (IsKeyDown(KEY_E))
 		SetCategory(POWERUP);
-	else if (InputHelper::IsKeyDown(DIK_R))
+	else if (IsKeyDown(KEY_R))
 		SetCategory(WEAPON);
-	else if (InputHelper::IsKeyDown(DIK_T))
+	else if (IsKeyDown(KEY_T))
 		SetCategory(EFFECT);
-	else if (InputHelper::IsKeyDown(DIK_G))
+	else if (IsKeyDown(KEY_G))
 		drawingGridInfo = !drawingGridInfo;
 
-	else if (InputHelper::IsKeyDown(DIK_LBRACKET))
+	else if (IsKeyDown(KEY_LEFT_BRACKET))
 		PreviousMap();
-	else if (InputHelper::IsKeyDown(DIK_RBRACKET))
+	else if (IsKeyDown(KEY_RIGHT_BRACKET))
 		NextMap();
 
-	else if (InputHelper::IsKeyDown(DIK_1))
+	else if (IsKeyDown(KEY_ONE))
 		player.SetPosition(checkpoints["Checkpoint"]);
-	else if (InputHelper::IsKeyDown(DIK_2))
+	else if (IsKeyDown(KEY_TWO))
 		player.SetPosition(checkpoints["Checkpoint_02"]);
-	else if (InputHelper::IsKeyDown(DIK_3))
+	else if (IsKeyDown(KEY_THREE))
 		player.SetPosition(checkpoints["Checkpoint_03"]);
-	else if (InputHelper::IsKeyDown(DIK_4))
+	else if (IsKeyDown(KEY_FOUR))
 		player.SetPosition(checkpoints["Checkpoint_04"]);
-	else if (InputHelper::IsKeyDown(DIK_5))
+	else if (IsKeyDown(KEY_FIVE))
 		player.SetPosition(checkpoints["Checkpoint_05"]);
-	else if (InputHelper::IsKeyDown(DIK_6))
+	else if (IsKeyDown(KEY_SIX))
 		player.SetPosition(checkpoints["Checkpoint_06"]);
 
-	else if (InputHelper::IsKeyDown(DIK_8))
+	else if (IsKeyDown(KEY_EIGHT))
 		player.data.hearts += 200;
-	else if (InputHelper::IsKeyDown(DIK_9))
+	else if (IsKeyDown(KEY_NINE))
 		player.data.health.Set(1);
-	else if (InputHelper::IsKeyDown(DIK_0))
+	else if (IsKeyDown(KEY_ZERO))
 		player.data.health.Set(MAX_HEALTH);
-	else if (InputHelper::IsKeyDown(DIK_NUMPADMINUS))
+	else if (IsKeyDown(KEY_KP_SUBTRACT))
 		player.Die();
-	else if (InputHelper::IsKeyDown(DIK_ADD))
+	else if (IsKeyDown(KEY_KP_ADD))
 		player.data.lives++;
-	else if (InputHelper::IsKeyDown(DIK_GRAVE))
+	else if (IsKeyDown(KEY_GRAVE))
 		player.ToggleGodMode();
 
 	// Update mouse input
-	if (InputHelper::IsScrollingDown())
+	if (GetMouseWheelMove() > 0)
 		PreviousItem();
-	else if (InputHelper::IsScrollingUp())
+	else if (GetMouseWheelMove() < 0)
 		NextItem();
-	else if (InputHelper::IsMouseReleased(MouseButton::Left))
+	else if (IsMouseButtonReleased(MOUSE_BUTTON_LEFT))
 		SpawnItem();
-	else if (InputHelper::IsMouseReleased(MouseButton::Right))
+	else if (IsMouseButtonReleased(MOUSE_BUTTON_RIGHT))
 		currentFacing = Opposite(currentFacing);
 
 	UpdateEffects(updatData.gameTime);
@@ -246,7 +246,7 @@ void DevTool::Draw(SpriteExtensions& spriteBatch)
 		effect->Draw(spriteBatch);
 
 	auto objectPosition = GetCurrentItemPosition();
-	auto textPosition = Vector2{ objectPosition.x, objectPosition.y - 20 };
+	auto textPosition = base::Vector2{ objectPosition.x, objectPosition.y - 20 };
 	auto effect = currentFacing == Facing::Left ? SpriteEffects::FlipHorizontally : SpriteEffects::None;
 	auto itemName = items[currentCategory][currentItemIndex].first;
 	auto sprite = items[currentCategory][currentItemIndex].second;
@@ -254,17 +254,17 @@ void DevTool::Draw(SpriteExtensions& spriteBatch)
 	sprite.SetEffect(effect);
 
 	DrawCollisionGridInfo(spriteBatch);
-	spriteBatch.DrawString(*debugFont, itemName, textPosition, Color::White());
+	spriteBatch.DrawString(*debugFont, itemName, textPosition, base::Color::White());
 	spriteBatch.Draw(sprite, objectPosition);
 }
 
-Vector2 DevTool::GetCurrentItemPosition()
+base::Vector2 DevTool::GetCurrentItemPosition()
 {
-	auto mousePosition = camera.ScreenToWorld(InputHelper::GetMousePosition());
+	auto mousePosition = camera.ScreenToWorld({ GetMousePosition().x, GetMousePosition().y }); // TODO:
 	auto sprite = items[currentCategory][currentItemIndex].second;
 	auto spriteWidth = sprite.GetFrameRectangle(mousePosition).Width();
 
-	return Vector2{ mousePosition.x - spriteWidth, mousePosition.y };
+	return base::Vector2{ mousePosition.x - spriteWidth, mousePosition.y };
 }
 
 std::unique_ptr<IEffect> DevTool::CreateEffect(std::string name)
@@ -311,7 +311,7 @@ void DevTool::DrawCollisionGridInfo(SpriteExtensions& spriteBatch)
 				<< "CoObjs:" << grid.GetCollisionObjects(col, row).size();
 
 			auto cellBbox = cell.GetBoundingBox();
-			auto gridInfoTextPosition = Vector2{
+			auto gridInfoTextPosition = base::Vector2{
 				cellBbox.X() + cellBbox.Width() / 2 - 25,
 				cellBbox.Y() + cellBbox.Height() / 2 - 25 };
 
@@ -319,11 +319,11 @@ void DevTool::DrawCollisionGridInfo(SpriteExtensions& spriteBatch)
 			auto bottomLine = RectF{ cellBbox.left, cellBbox.bottom, cellBbox.Width(), 1 };
 			auto textBackground = RectF{ gridInfoTextPosition.x - 5, gridInfoTextPosition.y - 2, 70, 47 };
 
-			RenderingSystem::DrawBoundingBox(spriteBatch, rightLine, Color::DimGray());
-			RenderingSystem::DrawBoundingBox(spriteBatch, bottomLine, Color::DimGray());
-			RenderingSystem::DrawBoundingBox(spriteBatch, textBackground, Color::DimGray() * 0.7f);
+			RenderingSystem::DrawBoundingBox(spriteBatch, rightLine, base::Color::DimGray());
+			RenderingSystem::DrawBoundingBox(spriteBatch, bottomLine, base::Color::DimGray());
+			RenderingSystem::DrawBoundingBox(spriteBatch, textBackground, base::Color::DimGray() * 0.7f);
 
-			spriteBatch.DrawString(*debugFont, gridInfoText.str(), gridInfoTextPosition, Color::White());
+			spriteBatch.DrawString(*debugFont, gridInfoText.str(), gridInfoTextPosition, base::Color::White());
 		});
 }
 
@@ -417,7 +417,7 @@ void DevTool::SpawnObject()
 		{
 			object = objectFactory.CreateSubWeapon(type);
 			object->SetFacing(currentFacing);
-			dynamic_cast<RangedWeapon&>(*object).Throw(InputHelper::GetMousePosition());
+			dynamic_cast<RangedWeapon&>(*object).Throw({ GetMousePosition().x, GetMousePosition().y });
 			break;
 		}
 		}

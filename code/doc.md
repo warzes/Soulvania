@@ -26,6 +26,21 @@ Commits on Jun 28, 2021
 			#define PLATFORM_DESKTOP 1
 			#define GRAPHICS_API_OPENGL_33 1
 
+		в конфиге рейлиба
+			отключить
+				SUPPORT_CAMERA_SYSTEM (сво€ камера, но может потом проверить)
+				SUPPORT_GESTURES_SYSTEM 
+				SUPPORT_MOUSE_GESTURES
+				SUPPORT_SSH_KEYBOARD_RPI (хер знает зачем оно)
+				SUPPORT_COMPRESSION_API (пока не используетс€)
+				SUPPORT_DATA_STORAGE (пока не используетс€)
+				SUPPORT_FILEFORMAT_DDS
+				SUPPORT_FILEFORMAT_HDR
+				SUPPORT_FILEFORMAT_OBJ SUPPORT_FILEFORMAT_MTL SUPPORT_FILEFORMAT_IQM SUPPORT_FILEFORMAT_GLTF SUPPORT_MESH_GENERATION - не использую 3д, поэтому и этот код не нужен
+			включить
+				SUPPORT_GIF_RECORDING (запись гифки по ctrl-f12)
+				SUPPORT_FILEFORMAT_BMP
+
 glfw
 	Commits on Jun 26, 2021
 		Remove errors for gamepad element mismatch Е

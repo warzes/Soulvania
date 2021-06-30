@@ -4,33 +4,40 @@
 #include "Vector2.h"
 #include "Viewport.h"
 
-enum class Scrolling
+namespace base
 {
-	Horizontally,
-	Vertically,
-	Center,
-};
 
-class Camera
-{
-public:
-	Camera();
+	enum class Scrolling
+	{
+		Horizontally,
+		Vertically,
+		Center,
+	};
 
-	void SetMoveArea(int x, int y, int width, int height);
-	void SetMoveArea(Rect moveArea);
-	RectF GetBounds();
+	class Camera
+	{
+	public:
+		Camera();
 
-	void SetPosition(base::Vector2 position);
-	void Move(base::Vector2 position);
-	void LookAt(base::Vector2 position, Scrolling scrolling = Scrolling::Center);
-	void Lock();
+		static inline Camera* thisCamera = nullptr;
 
-	base::Vector2 ScreenToWorld(base::Vector2 screenPosition);
-	base::Vector2 WorldToScreen(base::Vector2 worldPosition);
+		void SetMoveArea(int x, int y, int width, int height);
+		void SetMoveArea(Rect moveArea);
+		RectF GetBounds();
+		Viewport& GetViewport() { return viewport; }
 
-private:
-	Rect moveArea;
-	Viewport& viewport = graphicsDevice.GetViewport();
+		void SetPosition(base::Vector2 position);
+		void Move(base::Vector2 position);
+		void LookAt(base::Vector2 position, Scrolling scrolling = Scrolling::Center);
+		void Lock();
 
-	void ClampMove();
-};
+		base::Vector2 ScreenToWorld(base::Vector2 screenPosition);
+		base::Vector2 WorldToScreen(base::Vector2 worldPosition);
+
+	private:
+		Rect moveArea;
+		Viewport viewport;// = graphicsDevice.GetViewport();
+
+		void ClampMove();
+	};
+}

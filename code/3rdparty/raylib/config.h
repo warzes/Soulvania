@@ -29,13 +29,13 @@
 // Module: core - Configuration Flags
 //------------------------------------------------------------------------------------
 // Camera module is included (camera.h) and multiple predefined cameras are available: free, 1st/3rd person, orbital
-#define SUPPORT_CAMERA_SYSTEM       1
+//#define SUPPORT_CAMERA_SYSTEM       1
 // Gestures module is included (gestures.h) to support gestures detection: tap, hold, swipe, drag
-#define SUPPORT_GESTURES_SYSTEM     1
+//#define SUPPORT_GESTURES_SYSTEM     1
 // Mouse gestures are directly mapped like touches and processed by gestures system
-#define SUPPORT_MOUSE_GESTURES      1
+//#define SUPPORT_MOUSE_GESTURES      1
 // Reconfigure standard input to receive key inputs, works with SSH connection.
-#define SUPPORT_SSH_KEYBOARD_RPI    1
+//#define SUPPORT_SSH_KEYBOARD_RPI    1
 // Draw a mouse pointer on screen
 //#define SUPPORT_MOUSE_CURSOR_POINT   1
 // Setting a higher resolution can improve the accuracy of time-out intervals in wait functions.
@@ -52,9 +52,9 @@
 // Allow automatic gif recording of current screen pressing CTRL+F12, defined in KeyCallback()
 #define SUPPORT_GIF_RECORDING       1
 // Support CompressData() and DecompressData() functions
-#define SUPPORT_COMPRESSION_API     1
+//#define SUPPORT_COMPRESSION_API     1
 // Support saving binary data automatically to a generated storage.data file. This file is managed internally.
-#define SUPPORT_DATA_STORAGE        1
+//#define SUPPORT_DATA_STORAGE        1
 // Support automatic generated events, loading and recording of those events when required
 //#define SUPPORT_EVENTS_AUTOMATION     1
 // Support custom frame control, only for advance users
@@ -137,13 +137,13 @@
 //------------------------------------------------------------------------------------
 // Selecte desired fileformats to be supported for image data loading
 #define SUPPORT_FILEFORMAT_PNG      1
-//#define SUPPORT_FILEFORMAT_BMP      1
+#define SUPPORT_FILEFORMAT_BMP      1
 //#define SUPPORT_FILEFORMAT_TGA      1
 //#define SUPPORT_FILEFORMAT_JPG      1
 #define SUPPORT_FILEFORMAT_GIF      1
 //#define SUPPORT_FILEFORMAT_PSD      1
-#define SUPPORT_FILEFORMAT_DDS      1
-#define SUPPORT_FILEFORMAT_HDR      1
+//#define SUPPORT_FILEFORMAT_DDS      1
+//#define SUPPORT_FILEFORMAT_HDR      1
 //#define SUPPORT_FILEFORMAT_KTX      1
 //#define SUPPORT_FILEFORMAT_ASTC     1
 //#define SUPPORT_FILEFORMAT_PKM      1
@@ -183,13 +183,13 @@
 // Module: models - Configuration Flags
 //------------------------------------------------------------------------------------
 // Selected desired model fileformats to be supported for loading
-#define SUPPORT_FILEFORMAT_OBJ      1
-#define SUPPORT_FILEFORMAT_MTL      1
-#define SUPPORT_FILEFORMAT_IQM      1
-#define SUPPORT_FILEFORMAT_GLTF     1
+//#define SUPPORT_FILEFORMAT_OBJ      1
+//#define SUPPORT_FILEFORMAT_MTL      1
+//#define SUPPORT_FILEFORMAT_IQM      1
+//#define SUPPORT_FILEFORMAT_GLTF     1
 // Support procedural mesh generation functions, uses external par_shapes.h library
 // NOTE: Some generated meshes DO NOT include generated texture coordinates
-#define SUPPORT_MESH_GENERATION     1
+//#define SUPPORT_MESH_GENERATION     1
 
 
 //------------------------------------------------------------------------------------

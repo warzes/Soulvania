@@ -3,6 +3,7 @@
 #include "Sprite.h"
 #include "Vector2.h"
 #include "Color.h"
+#include "Viewport.h"
 
 class SpriteBatch
 {

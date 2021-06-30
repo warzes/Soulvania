@@ -39,12 +39,12 @@ private:
 	Stage& stage;
 	ObjectFactory& objectFactory;
 	Player& player;
-	Camera& camera;
+	base::Camera& camera;
 
 	std::unique_ptr<EffectFactory> effectFactory;
 	std::vector<std::shared_ptr<IEffect>> activeEffects;
 
-	Vector2 GetCurrentItemPosition();
+	base::Vector2 GetCurrentItemPosition();
 	std::unique_ptr<IEffect> CreateEffect(std::string name);
 	void UpdateEffects(GameTime gameTime);
 	void DrawCollisionGridInfo(SpriteExtensions& spriteBatch);

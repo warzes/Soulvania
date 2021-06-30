@@ -1,14 +1,14 @@
 #pragma once
 
 #include "Tile.h"
-#include "IDrawable.h"
+#include "SpriteExtensions.h"
 
 using TileSet = std::vector<std::vector<Tile>>;
 using TiledMapObjectProperties = std::unordered_map<std::string, std::string>;
 using TiledMapObjects = std::vector<TiledMapObjectProperties>;
 using TiledMapObjectGroups = std::unordered_map<std::string, TiledMapObjects>;
 
-class TiledMap : public IDrawable
+class TiledMap// : public IDrawable
 {
 public:
 	TiledMap(std::string name, int width, int height, int tileWidth, int tileHeight);
@@ -26,7 +26,7 @@ public:
 	void SetMapObjects(TiledMapObjectGroups objects);
 	TiledMapObjectGroups GetMapObjects();
 
-	void Draw(SpriteExtensions& spriteBatch) override;
+	void Draw(SpriteExtensions& spriteBatch, const RectF& camBbox);
 
 private:
 	std::string name;

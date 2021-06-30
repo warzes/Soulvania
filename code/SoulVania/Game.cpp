@@ -37,8 +37,9 @@ void Game::Initialize()
 {
 	InitWindow(screenWidth, screenHeight, "Soulvania");
 	SetTargetFPS(60);
+	SetExitKey(0);
 
-	InitAudioDevice();      // Initialize audio device
+	//InitAudioDevice();      // Initialize audio device
 
 	LoadContent();
 }
